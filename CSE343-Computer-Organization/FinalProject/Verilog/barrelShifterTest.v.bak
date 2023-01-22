@@ -1,0 +1,40 @@
+
+`timescale 1ns/1ps 
+module barrelShifterTest();
+
+	reg [15:0] a;
+	reg[3:0] select;
+	wire [15:0] s;
+	barrelShifter(a,select,s);
+	
+
+	initial begin	
+			alu_op = 3'b000;
+			
+			a = 32'h00000014;
+			b = 32'h00000013;
+			
+			#10;
+			
+			a = 32'h00000a40;
+			b = 32'h00000f13;
+			#10;
+			
+			a = 32'h00000c14;
+			b = 32'h00000d13;
+			
+			#10;
+			
+			a = 32'hf0000c14;
+			b = 32'h00000d13;
+
+			#10;
+			
+		
+			$stop;
+			$finish;
+	end
+
+
+
+endmodule

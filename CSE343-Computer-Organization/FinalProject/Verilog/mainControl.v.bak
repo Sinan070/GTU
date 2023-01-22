@@ -1,0 +1,24 @@
+module mainControl(input [5:0] opcode, 
+output regDst,
+branch,
+memRead,
+memtoReg,
+memWrite,
+aluSrc,
+regWrite
+bne,
+shift,
+shiftL,
+output [2:0] aluOp
+);
+
+
+
+
+
+
+endmodule
+
+
+
+

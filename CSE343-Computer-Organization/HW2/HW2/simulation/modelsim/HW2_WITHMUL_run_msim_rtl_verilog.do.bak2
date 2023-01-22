@@ -1,0 +1,19 @@
+transcript on
+if {[file exists rtl_work]} {
+	vdel -lib rtl_work -all
+}
+vlib rtl_work
+vmap work rtl_work
+
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1Bit.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1BitLsb.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1BitMsb.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/halfAdder.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/fullAdder.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux2x1.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux4x1.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux8x1.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu2Bit.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu4Bit.v}
+vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu32.v}
+

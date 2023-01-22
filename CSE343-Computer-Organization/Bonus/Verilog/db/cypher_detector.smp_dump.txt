@@ -1,0 +1,8 @@
+
+State Machine - |cypher_detector|control:ctrl|currentState
+Name currentState.UPDATE currentState.CHECK currentState.READ currentState.START currentState.END 
+currentState.START 0 0 0 0 0 
+currentState.READ 0 0 1 1 0 
+currentState.CHECK 0 1 0 1 0 
+currentState.UPDATE 1 0 0 1 0 
+currentState.END 0 0 0 1 1 

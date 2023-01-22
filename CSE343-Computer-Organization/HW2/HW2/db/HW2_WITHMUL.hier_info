@@ -1,0 +1,146 @@
+|alu1BitLsb
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_out << fullAdder:fulladder1.port4
+r << mux8x1:mux.port9
+
+
+|alu1BitLsb|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|alu1BitLsb|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+

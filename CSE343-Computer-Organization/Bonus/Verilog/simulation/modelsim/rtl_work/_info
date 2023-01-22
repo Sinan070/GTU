@@ -1,0 +1,84 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\org\CSE343-Computer-Organization\Bonus\simulation\modelsim
+vcontrol
+IJjl4Vi59id]8LM92noi071
+Vo;AMnD:E0UYF;dF[Sc^b61
+Z1 dD:\org\CSE343-Computer-Organization\Bonus\simulation\modelsim
+w1673293282
+8D:/org/CSE343-Computer-Organization/Bonus/control.v
+FD:/org/CSE343-Computer-Organization/Bonus/control.v
+L0 1
+Z2 OV;L;10.1d;51
+r1
+31
+Z3 o-vlog01compat -work work -O0
+Z4 !s92 -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/Bonus -O0
+!i10b 1
+!s100 zYEFB;^Xg8kV@h@Z:_kiL2
+!s85 0
+!s108 1673293297.852000
+!s107 D:/org/CSE343-Computer-Organization/Bonus/control.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/Bonus|D:/org/CSE343-Computer-Organization/Bonus/control.v|
+!s101 -O0
+vcypher_detector
+Iban0@K[HIz_;a2L4eC74m0
+V7>3mTG_TVVMTVhn8UnSXS3
+R1
+w1673281498
+8D:/org/CSE343-Computer-Organization/Bonus/cypher_detector.v
+FD:/org/CSE343-Computer-Organization/Bonus/cypher_detector.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 lok3QHIVEz0<d=L@Z>kGP3
+!s85 0
+!s108 1673293298.066000
+!s107 D:/org/CSE343-Computer-Organization/Bonus/cypher_detector.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/Bonus|D:/org/CSE343-Computer-Organization/Bonus/cypher_detector.v|
+!s101 -O0
+vcypher_detector_tb
+!i10b 1
+!s100 2P@FLhe7VKj95LVeUT4;:3
+I]69Ri_7;=`UnV0eZU`PY11
+VWA@e1[R=Dm6d0WmU=<T=j1
+R1
+w1673290908
+8D:/org/CSE343-Computer-Organization/Bonus/cypher_detector_tb.v
+FD:/org/CSE343-Computer-Organization/Bonus/cypher_detector_tb.v
+L0 2
+R2
+r1
+!s85 0
+31
+!s108 1673293304.434000
+!s107 D:/org/CSE343-Computer-Organization/Bonus/cypher_detector_tb.v|
+!s90 -reportprogress|300|-work|work|D:/org/CSE343-Computer-Organization/Bonus/cypher_detector_tb.v|
+!s101 -O0
+o-work work -O0
+vdatapath
+ImG4d2:O1P>U;gT_Rg493S1
+Vb6TZjVbEU7eaVA>Z=XmAh3
+R1
+w1673291311
+8D:/org/CSE343-Computer-Organization/Bonus/datapath.v
+FD:/org/CSE343-Computer-Organization/Bonus/datapath.v
+L0 1
+R2
+r1
+31
+R3
+R4
+!i10b 1
+!s100 N_NB:@UAZ3FbNK:^?9iog2
+!s85 0
+!s108 1673293297.971000
+!s107 D:/org/CSE343-Computer-Organization/Bonus/datapath.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/Bonus|D:/org/CSE343-Computer-Organization/Bonus/datapath.v|
+!s101 -O0

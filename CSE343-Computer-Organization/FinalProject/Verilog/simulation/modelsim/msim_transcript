@@ -1,0 +1,262 @@
+# Reading D:/quartusSetup/modelsim_ase/tcl/vsim/pref.tcl 
+# do cpu16_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2x1
+# 
+# Top level modules:
+# 	mux2x1
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1Bit
+# 
+# Top level modules:
+# 	alu1Bit
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitLsb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1BitLsb
+# 
+# Top level modules:
+# 	alu1BitLsb
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitMsb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1BitMsb
+# 
+# Top level modules:
+# 	alu1BitMsb
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu2Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu2Bit
+# 
+# Top level modules:
+# 	alu2Bit
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu4Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu4Bit
+# 
+# Top level modules:
+# 	alu4Bit
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu16
+# 
+# Top level modules:
+# 	alu16
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/fullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/halfAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module halfAdder
+# 
+# Top level modules:
+# 	halfAdder
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux4x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4x1
+# 
+# Top level modules:
+# 	mux4x1
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux8x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8x1
+# 
+# Top level modules:
+# 	mux8x1
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barrelShifter
+# 
+# Top level modules:
+# 	barrelShifter
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barrelShifterL1
+# 
+# Top level modules:
+# 	barrelShifterL1
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL2.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barrelShifterL2
+# 
+# Top level modules:
+# 	barrelShifterL2
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL3.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barrelShifterL3
+# 
+# Top level modules:
+# 	barrelShifterL3
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL4.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module barrelShifterL4
+# 
+# Top level modules:
+# 	barrelShifterL4
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mirror.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mirror
+# 
+# Top level modules:
+# 	mirror
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux16Bit2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux16Bit2x1
+# 
+# Top level modules:
+# 	mux16Bit2x1
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/shifter.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module shifter
+# 
+# Top level modules:
+# 	shifter
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/registerFile.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module registerFile
+# 
+# Top level modules:
+# 	registerFile
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/dataMemory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module dataMemory
+# 
+# Top level modules:
+# 	dataMemory
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips16
+# 
+# Top level modules:
+# 	mips16
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/insMemory.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module insMemory
+# 
+# Top level modules:
+# 	insMemory
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mainControl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mainControl
+# 
+# Top level modules:
+# 	mainControl
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/aluControl.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module aluControl
+# 
+# Top level modules:
+# 	aluControl
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog {D:/org/CSE343-Computer-Organization/FinalProject/Verilog/pc.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module pc
+# 
+# Top level modules:
+# 	pc
+# 
+vlog -reportprogress 300 -work work D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mips16Testbench
+# 
+# Top level modules:
+# 	mips16Testbench
+vsim work.mips16Testbench
+# vsim work.mips16Testbench 
+# Loading work.mips16Testbench
+# Loading work.mips16
+# Loading work.pc
+# Loading work.insMemory
+# Loading work.mainControl
+# Loading work.registerFile
+# Loading work.aluControl
+# Loading work.alu16
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# Loading work.shifter
+# Loading work.mirror
+# Loading work.mux16Bit2x1
+# Loading work.barrelShifter
+# Loading work.barrelShifterL1
+# Loading work.barrelShifterL2
+# Loading work.barrelShifterL3
+# Loading work.barrelShifterL4
+# Loading work.dataMemory
+run -all
+# lw  1 (    0) 0
+# 
+# lw  2 (    2) 0
+# 
+# lw  3 (    4) 0
+# 
+# lw  4 (    6) 0
+# 
+# lw  5 (    8) 0
+# 
+# lw  6 (   10) 0
+# 
+# add  7  1  2
+# 
+# add  8  3  4
+# 
+# addi  9  5    32
+# 
+# sub 10  7  8
+# 
+# slt 11  3  3
+# 
+# and 12  1  2
+# 
+# or 13  9  2
+# 
+# andi 14  9    16
+# 
+# ori 15  4    16
+# 
+# slti 11  3     4
+# 
+# sw  1 (   12) 0
+# 
+# sw  2 (   14) 0
+# 
+# sw  9 (   16) 0
+# 
+# sw 10 (   18) 0
+# 
+# sw 11 (   20) 0
+# 
+# sw 12 (   22) 0
+# 
+# li  1   100
+# 
+# li  2  4096
+# 
+# srl  3  4  3
+# 
+# sll  5  6  5
+# 
+# j   120
+# 
+# j 65535
+# 
+# Break in Module mips16Testbench at D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v line 47

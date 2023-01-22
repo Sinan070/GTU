@@ -1,0 +1,7 @@
+module mips16(input clk,eset,output [15:0]result,pc);
+
+
+
+
+
+endmodule

@@ -1,0 +1,57 @@
+# Reading D:/quartusSetup/modelsim_ase/tcl/vsim/pref.tcl 
+# do cypher_detector_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/Bonus {D:/org/CSE343-Computer-Organization/Bonus/control.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module control
+# 
+# Top level modules:
+# 	control
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/Bonus {D:/org/CSE343-Computer-Organization/Bonus/datapath.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# vlog -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/Bonus {D:/org/CSE343-Computer-Organization/Bonus/cypher_detector.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cypher_detector
+# 
+# Top level modules:
+# 	cypher_detector
+# 
+vlog -reportprogress 300 -work work D:/org/CSE343-Computer-Organization/Bonus/cypher_detector_tb.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module cypher_detector_tb
+# 
+# Top level modules:
+# 	cypher_detector_tb
+vsim work.cypher_detector_tb
+# vsim work.cypher_detector_tb 
+# Loading work.cypher_detector_tb
+# Loading work.cypher_detector
+# Loading work.control
+# Loading work.datapath
+add wave -position end  sim:/cypher_detector_tb/cypher
+add wave -position end  sim:/cypher_detector_tb/test
+add wave -position end  sim:/cypher_detector_tb/nextInput
+add wave -position end  sim:/cypher_detector_tb/clock
+add wave -position end  sim:/cypher_detector_tb/reset
+add wave -position end  sim:/cypher_detector_tb/read
+add wave -position end  sim:/cypher_detector_tb/cypherInput
+add wave -position end  sim:/cypher_detector_tb/states
+add wave -position end  sim:/cypher_detector_tb/sum
+add wave -position end  sim:/cypher_detector_tb/result
+add wave -position end  sim:/cypher_detector_tb/inputReaded
+run -all
+# Break key hit 
+# Simulation stop requested.

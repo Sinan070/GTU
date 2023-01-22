@@ -1,0 +1,7 @@
+module dataMemory(input memWrite, memRead,input [15:0] adress , writeData, output [15:0] readData);
+
+
+
+
+
+endmodule

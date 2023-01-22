@@ -1,0 +1,8 @@
+module cypherChecker(input [15:0] cypher, input [3:0] in, input clk, input read , output [7:0] sum , input res);
+
+
+
+
+
+
+endmodule

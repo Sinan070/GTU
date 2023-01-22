@@ -1,0 +1,7357 @@
+|mips16
+clock => clock.IN4
+
+
+|mips16|pc:programCounter
+clock => pCounter[0].CLK
+clock => pCounter[1].CLK
+clock => pCounter[2].CLK
+clock => pCounter[3].CLK
+clock => pCounter[4].CLK
+clock => pCounter[5].CLK
+clock => pCounter[6].CLK
+clock => pCounter[7].CLK
+clock => pCounter[8].CLK
+clock => pCounter[9].CLK
+clock => pCounter[10].CLK
+clock => pCounter[11].CLK
+clock => pCounter[12].CLK
+clock => pCounter[13].CLK
+clock => pCounter[14].CLK
+clock => pCounter[15].CLK
+in[0] => pCounter[0].DATAIN
+in[1] => pCounter[1].DATAIN
+in[2] => pCounter[2].DATAIN
+in[3] => pCounter[3].DATAIN
+in[4] => pCounter[4].DATAIN
+in[5] => pCounter[5].DATAIN
+in[6] => pCounter[6].DATAIN
+in[7] => pCounter[7].DATAIN
+in[8] => pCounter[8].DATAIN
+in[9] => pCounter[9].DATAIN
+in[10] => pCounter[10].DATAIN
+in[11] => pCounter[11].DATAIN
+in[12] => pCounter[12].DATAIN
+in[13] => pCounter[13].DATAIN
+in[14] => pCounter[14].DATAIN
+in[15] => pCounter[15].DATAIN
+out[0] <= pCounter[0].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= pCounter[1].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= pCounter[2].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= pCounter[3].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= pCounter[4].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= pCounter[5].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= pCounter[6].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= pCounter[7].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= pCounter[8].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= pCounter[9].DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= pCounter[10].DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= pCounter[11].DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= pCounter[12].DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= pCounter[13].DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= pCounter[14].DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= pCounter[15].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|insMemory:instructionMemory
+clock => ~NO_FANOUT~
+pc[0] => ~NO_FANOUT~
+pc[1] => ~NO_FANOUT~
+pc[2] => ~NO_FANOUT~
+pc[3] => ~NO_FANOUT~
+pc[4] => ~NO_FANOUT~
+pc[5] => ~NO_FANOUT~
+pc[6] => ~NO_FANOUT~
+pc[7] => ~NO_FANOUT~
+pc[8] => ~NO_FANOUT~
+pc[9] => ~NO_FANOUT~
+pc[10] => ~NO_FANOUT~
+pc[11] => ~NO_FANOUT~
+pc[12] => ~NO_FANOUT~
+pc[13] => ~NO_FANOUT~
+pc[14] => ~NO_FANOUT~
+pc[15] => ~NO_FANOUT~
+instruction[0] <= <GND>
+instruction[1] <= <GND>
+instruction[2] <= <GND>
+instruction[3] <= <GND>
+instruction[4] <= <GND>
+instruction[5] <= <GND>
+instruction[6] <= <GND>
+instruction[7] <= <GND>
+instruction[8] <= <GND>
+instruction[9] <= <GND>
+instruction[10] <= <GND>
+instruction[11] <= <GND>
+instruction[12] <= <GND>
+instruction[13] <= <GND>
+instruction[14] <= <GND>
+instruction[15] <= <GND>
+instruction[16] <= <GND>
+instruction[17] <= <GND>
+instruction[18] <= <GND>
+instruction[19] <= <GND>
+instruction[20] <= <GND>
+instruction[21] <= <GND>
+instruction[22] <= <GND>
+instruction[23] <= <GND>
+instruction[24] <= <GND>
+instruction[25] <= <GND>
+instruction[26] <= <GND>
+instruction[27] <= <GND>
+instruction[28] <= <GND>
+instruction[29] <= <GND>
+instruction[30] <= <GND>
+instruction[31] <= <GND>
+
+
+|mips16|mainControl:maincontroller
+opcode[0] => Decoder0.IN5
+opcode[1] => Decoder0.IN4
+opcode[2] => Decoder0.IN3
+opcode[3] => Decoder0.IN2
+opcode[4] => Decoder0.IN1
+opcode[5] => Decoder0.IN0
+regDst <= regDst$latch.DB_MAX_OUTPUT_PORT_TYPE
+branch <= branch$latch.DB_MAX_OUTPUT_PORT_TYPE
+memRead <= memRead$latch.DB_MAX_OUTPUT_PORT_TYPE
+memtoReg <= memtoReg$latch.DB_MAX_OUTPUT_PORT_TYPE
+memWrite <= memWrite$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluSrc <= aluSrc$latch.DB_MAX_OUTPUT_PORT_TYPE
+regWrite <= regWrite$latch.DB_MAX_OUTPUT_PORT_TYPE
+bneSignal <= bneSignal$latch.DB_MAX_OUTPUT_PORT_TYPE
+shift <= shift$latch.DB_MAX_OUTPUT_PORT_TYPE
+sll <= sll$latch.DB_MAX_OUTPUT_PORT_TYPE
+j <= j$latch.DB_MAX_OUTPUT_PORT_TYPE
+jal <= jal$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluOp[0] <= aluOp[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluOp[1] <= aluOp[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluOp[2] <= aluOp[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|registerFile:registerfile
+clock => regFile.we_a.CLK
+clock => regFile.waddr_a[3].CLK
+clock => regFile.waddr_a[2].CLK
+clock => regFile.waddr_a[1].CLK
+clock => regFile.waddr_a[0].CLK
+clock => regFile.data_a[15].CLK
+clock => regFile.data_a[14].CLK
+clock => regFile.data_a[13].CLK
+clock => regFile.data_a[12].CLK
+clock => regFile.data_a[11].CLK
+clock => regFile.data_a[10].CLK
+clock => regFile.data_a[9].CLK
+clock => regFile.data_a[8].CLK
+clock => regFile.data_a[7].CLK
+clock => regFile.data_a[6].CLK
+clock => regFile.data_a[5].CLK
+clock => regFile.data_a[4].CLK
+clock => regFile.data_a[3].CLK
+clock => regFile.data_a[2].CLK
+clock => regFile.data_a[1].CLK
+clock => regFile.data_a[0].CLK
+clock => regFile.CLK0
+readReg1[0] => regFile.RADDR
+readReg1[1] => regFile.RADDR1
+readReg1[2] => regFile.RADDR2
+readReg1[3] => regFile.RADDR3
+readReg2[0] => regFile.PORTBRADDR
+readReg2[1] => regFile.PORTBRADDR1
+readReg2[2] => regFile.PORTBRADDR2
+readReg2[3] => regFile.PORTBRADDR3
+writeRegister[0] => regFile.waddr_a[0].DATAIN
+writeRegister[0] => Equal0.IN3
+writeRegister[0] => regFile.WADDR
+writeRegister[1] => regFile.waddr_a[1].DATAIN
+writeRegister[1] => Equal0.IN2
+writeRegister[1] => regFile.WADDR1
+writeRegister[2] => regFile.waddr_a[2].DATAIN
+writeRegister[2] => Equal0.IN1
+writeRegister[2] => regFile.WADDR2
+writeRegister[3] => regFile.waddr_a[3].DATAIN
+writeRegister[3] => Equal0.IN0
+writeRegister[3] => regFile.WADDR3
+writeData[0] => regFile.data_a[0].DATAIN
+writeData[0] => regFile.DATAIN
+writeData[1] => regFile.data_a[1].DATAIN
+writeData[1] => regFile.DATAIN1
+writeData[2] => regFile.data_a[2].DATAIN
+writeData[2] => regFile.DATAIN2
+writeData[3] => regFile.data_a[3].DATAIN
+writeData[3] => regFile.DATAIN3
+writeData[4] => regFile.data_a[4].DATAIN
+writeData[4] => regFile.DATAIN4
+writeData[5] => regFile.data_a[5].DATAIN
+writeData[5] => regFile.DATAIN5
+writeData[6] => regFile.data_a[6].DATAIN
+writeData[6] => regFile.DATAIN6
+writeData[7] => regFile.data_a[7].DATAIN
+writeData[7] => regFile.DATAIN7
+writeData[8] => regFile.data_a[8].DATAIN
+writeData[8] => regFile.DATAIN8
+writeData[9] => regFile.data_a[9].DATAIN
+writeData[9] => regFile.DATAIN9
+writeData[10] => regFile.data_a[10].DATAIN
+writeData[10] => regFile.DATAIN10
+writeData[11] => regFile.data_a[11].DATAIN
+writeData[11] => regFile.DATAIN11
+writeData[12] => regFile.data_a[12].DATAIN
+writeData[12] => regFile.DATAIN12
+writeData[13] => regFile.data_a[13].DATAIN
+writeData[13] => regFile.DATAIN13
+writeData[14] => regFile.data_a[14].DATAIN
+writeData[14] => regFile.DATAIN14
+writeData[15] => regFile.data_a[15].DATAIN
+writeData[15] => regFile.DATAIN15
+regWrite => always0.IN1
+readData1[0] <= regFile.DATAOUT
+readData1[1] <= regFile.DATAOUT1
+readData1[2] <= regFile.DATAOUT2
+readData1[3] <= regFile.DATAOUT3
+readData1[4] <= regFile.DATAOUT4
+readData1[5] <= regFile.DATAOUT5
+readData1[6] <= regFile.DATAOUT6
+readData1[7] <= regFile.DATAOUT7
+readData1[8] <= regFile.DATAOUT8
+readData1[9] <= regFile.DATAOUT9
+readData1[10] <= regFile.DATAOUT10
+readData1[11] <= regFile.DATAOUT11
+readData1[12] <= regFile.DATAOUT12
+readData1[13] <= regFile.DATAOUT13
+readData1[14] <= regFile.DATAOUT14
+readData1[15] <= regFile.DATAOUT15
+readData2[0] <= regFile.PORTBDATAOUT
+readData2[1] <= regFile.PORTBDATAOUT1
+readData2[2] <= regFile.PORTBDATAOUT2
+readData2[3] <= regFile.PORTBDATAOUT3
+readData2[4] <= regFile.PORTBDATAOUT4
+readData2[5] <= regFile.PORTBDATAOUT5
+readData2[6] <= regFile.PORTBDATAOUT6
+readData2[7] <= regFile.PORTBDATAOUT7
+readData2[8] <= regFile.PORTBDATAOUT8
+readData2[9] <= regFile.PORTBDATAOUT9
+readData2[10] <= regFile.PORTBDATAOUT10
+readData2[11] <= regFile.PORTBDATAOUT11
+readData2[12] <= regFile.PORTBDATAOUT12
+readData2[13] <= regFile.PORTBDATAOUT13
+readData2[14] <= regFile.PORTBDATAOUT14
+readData2[15] <= regFile.PORTBDATAOUT15
+
+
+|mips16|aluControl:alucontrolller
+func[0] => Decoder0.IN5
+func[1] => Decoder0.IN4
+func[2] => Decoder0.IN3
+func[3] => Decoder0.IN2
+func[4] => Decoder0.IN1
+func[5] => Decoder0.IN0
+aluOp[0] => Mux0.IN10
+aluOp[0] => Mux1.IN10
+aluOp[0] => Mux2.IN10
+aluOp[0] => Mux3.IN10
+aluOp[0] => Mux4.IN10
+aluOp[0] => Mux5.IN10
+aluOp[1] => Mux0.IN9
+aluOp[1] => Mux1.IN9
+aluOp[1] => Mux2.IN9
+aluOp[1] => Mux3.IN9
+aluOp[1] => Mux4.IN9
+aluOp[1] => Mux5.IN9
+aluOp[2] => Mux0.IN8
+aluOp[2] => Mux1.IN8
+aluOp[2] => Mux2.IN8
+aluOp[2] => Mux3.IN8
+aluOp[2] => Mux4.IN8
+aluOp[2] => Mux5.IN8
+aluCtr[0] <= aluCtr[0]$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluCtr[1] <= aluCtr[1]$latch.DB_MAX_OUTPUT_PORT_TYPE
+aluCtr[2] <= aluCtr[2]$latch.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN1
+a[5] => a[5].IN1
+a[6] => a[6].IN1
+a[7] => a[7].IN1
+a[8] => a[8].IN1
+a[9] => a[9].IN1
+a[10] => a[10].IN1
+a[11] => a[11].IN1
+a[12] => a[12].IN1
+a[13] => a[13].IN1
+a[14] => a[14].IN1
+a[15] => a[15].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN1
+b[5] => b[5].IN1
+b[6] => b[6].IN1
+b[7] => b[7].IN1
+b[8] => b[8].IN1
+b[9] => b[9].IN1
+b[10] => b[10].IN1
+b[11] => b[11].IN1
+b[12] => b[12].IN1
+b[13] => b[13].IN1
+b[14] => b[14].IN1
+b[15] => b[15].IN1
+multiplier[0] => ~NO_FANOUT~
+multiplier[1] => ~NO_FANOUT~
+multiplier[2] => ~NO_FANOUT~
+multiplier[3] => ~NO_FANOUT~
+multiplier[4] => ~NO_FANOUT~
+multiplier[5] => ~NO_FANOUT~
+multiplier[6] => ~NO_FANOUT~
+multiplier[7] => ~NO_FANOUT~
+multiplier[8] => ~NO_FANOUT~
+multiplier[9] => ~NO_FANOUT~
+multiplier[10] => ~NO_FANOUT~
+multiplier[11] => ~NO_FANOUT~
+multiplier[12] => ~NO_FANOUT~
+multiplier[13] => ~NO_FANOUT~
+multiplier[14] => ~NO_FANOUT~
+multiplier[15] => ~NO_FANOUT~
+multiplicand[0] => multiplicand[0].IN1
+multiplicand[1] => multiplicand[1].IN1
+multiplicand[2] => multiplicand[2].IN1
+multiplicand[3] => multiplicand[3].IN1
+multiplicand[4] => multiplicand[4].IN1
+multiplicand[5] => multiplicand[5].IN1
+multiplicand[6] => multiplicand[6].IN1
+multiplicand[7] => multiplicand[7].IN1
+multiplicand[8] => multiplicand[8].IN1
+multiplicand[9] => multiplicand[9].IN1
+multiplicand[10] => multiplicand[10].IN1
+multiplicand[11] => multiplicand[11].IN1
+multiplicand[12] => multiplicand[12].IN1
+multiplicand[13] => multiplicand[13].IN1
+multiplicand[14] => multiplicand[14].IN1
+multiplicand[15] => multiplicand[15].IN1
+alu_op[0] => alu_op[0].IN6
+alu_op[1] => alu_op[1].IN6
+alu_op[2] => alu_op[2].IN6
+r[0] <= alu1BitLsb:alu1.port7
+r[1] <= alu4Bit:alu2.port7
+r[2] <= alu4Bit:alu2.port7
+r[3] <= alu4Bit:alu2.port7
+r[4] <= alu4Bit:alu2.port7
+r[5] <= alu4Bit:alu3.port7
+r[6] <= alu4Bit:alu3.port7
+r[7] <= alu4Bit:alu3.port7
+r[8] <= alu4Bit:alu3.port7
+r[9] <= alu4Bit:alu4.port7
+r[10] <= alu4Bit:alu4.port7
+r[11] <= alu4Bit:alu4.port7
+r[12] <= alu4Bit:alu4.port7
+r[13] <= alu2Bit:alu9.port7
+r[14] <= alu2Bit:alu9.port7
+r[15] <= alu1BitMsb:alu10.port10
+equal <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitLsb:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+p[2] => p[2].IN1
+p[3] => p[3].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+mul[2] => mul[2].IN1
+mul[3] => mul[3].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu2Bit:alu2.port6
+r[0] <= alu2Bit:alu1.port7
+r[1] <= alu2Bit:alu1.port7
+r[2] <= alu2Bit:alu2.port7
+r[3] <= alu2Bit:alu2.port7
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu2|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+p[2] => p[2].IN1
+p[3] => p[3].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+mul[2] => mul[2].IN1
+mul[3] => mul[3].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu2Bit:alu2.port6
+r[0] <= alu2Bit:alu1.port7
+r[1] <= alu2Bit:alu1.port7
+r[2] <= alu2Bit:alu2.port7
+r[3] <= alu2Bit:alu2.port7
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu3|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+p[2] => p[2].IN1
+p[3] => p[3].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+mul[2] => mul[2].IN1
+mul[3] => mul[3].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu2Bit:alu2.port6
+r[0] <= alu2Bit:alu1.port7
+r[1] <= alu2Bit:alu1.port7
+r[2] <= alu2Bit:alu2.port7
+r[3] <= alu2Bit:alu2.port7
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu1|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu4Bit:alu4|alu2Bit:alu2|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+p[0] => p[0].IN1
+p[1] => p[1].IN1
+mul[0] => mul[0].IN1
+mul[1] => mul[1].IN1
+alu_op[0] => alu_op[0].IN2
+alu_op[1] => alu_op[1].IN2
+alu_op[2] => alu_op[2].IN2
+c_in => c_in.IN1
+c_out <= alu1Bit:alu2.port7
+r[0] <= alu1Bit:alu1.port8
+r[1] <= alu1Bit:alu2.port8
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu1|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu2Bit:alu9|alu1Bit:alu2|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10
+a => a.IN1
+b => b.IN1
+p0 => p0.IN1
+mul0 => mul0.IN1
+less => less.IN1
+alu_op[0] => alu_op[0].IN1
+alu_op[1] => alu_op[1].IN1
+alu_op[2] => alu_op[2].IN1
+c_in => c_in.IN1
+c_out <= fullAdder:fulladder1.port4
+v <= xorV.DB_MAX_OUTPUT_PORT_TYPE
+set <= xorSET.DB_MAX_OUTPUT_PORT_TYPE
+r <= mux8x1:mux.port9
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|fullAdder:fulladder1
+a => a.IN1
+b => b.IN1
+c_in => c_in.IN1
+s <= halfAdder:ad2.port2
+c_out <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|fullAdder:fulladder1|halfAdder:ad1
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|fullAdder:fulladder1|halfAdder:ad2
+a => and1.IN0
+a => xor1.IN0
+b => and1.IN1
+b => xor1.IN1
+s <= xor1.DB_MAX_OUTPUT_PORT_TYPE
+c_out <= and1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+e => e.IN1
+f => f.IN1
+g => g.IN1
+h => h.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN2
+select[2] => select[2].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux1
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux1|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux1|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux1|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux2
+a => a.IN1
+b => b.IN1
+c => c.IN1
+d => d.IN1
+select[0] => select[0].IN2
+select[1] => select[1].IN1
+s <= mux2x1:mux3.port3
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux2|mux2x1:mux1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux2|mux2x1:mux2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux4x1:mux2|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|alu16:alu|alu1BitMsb:alu10|mux8x1:mux|mux2x1:mux3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr
+in[0] => in[0].IN2
+in[1] => in[1].IN2
+in[2] => in[2].IN2
+in[3] => in[3].IN2
+in[4] => in[4].IN2
+in[5] => in[5].IN2
+in[6] => in[6].IN2
+in[7] => in[7].IN2
+in[8] => in[8].IN2
+in[9] => in[9].IN2
+in[10] => in[10].IN2
+in[11] => in[11].IN2
+in[12] => in[12].IN2
+in[13] => in[13].IN2
+in[14] => in[14].IN2
+in[15] => in[15].IN2
+shtA[0] => shtA[0].IN1
+shtA[1] => shtA[1].IN1
+shtA[2] => shtA[2].IN1
+shtA[3] => shtA[3].IN1
+left => left.IN2
+out[0] <= mux16Bit2x1:mux2.port3
+out[1] <= mux16Bit2x1:mux2.port3
+out[2] <= mux16Bit2x1:mux2.port3
+out[3] <= mux16Bit2x1:mux2.port3
+out[4] <= mux16Bit2x1:mux2.port3
+out[5] <= mux16Bit2x1:mux2.port3
+out[6] <= mux16Bit2x1:mux2.port3
+out[7] <= mux16Bit2x1:mux2.port3
+out[8] <= mux16Bit2x1:mux2.port3
+out[9] <= mux16Bit2x1:mux2.port3
+out[10] <= mux16Bit2x1:mux2.port3
+out[11] <= mux16Bit2x1:mux2.port3
+out[12] <= mux16Bit2x1:mux2.port3
+out[13] <= mux16Bit2x1:mux2.port3
+out[14] <= mux16Bit2x1:mux2.port3
+out[15] <= mux16Bit2x1:mux2.port3
+
+
+|mips16|shifter:shtr|mirror:miror1
+in[0] => out[15].DATAIN
+in[1] => out[14].DATAIN
+in[2] => out[13].DATAIN
+in[3] => out[12].DATAIN
+in[4] => out[11].DATAIN
+in[5] => out[10].DATAIN
+in[6] => out[9].DATAIN
+in[7] => out[8].DATAIN
+in[8] => out[7].DATAIN
+in[9] => out[6].DATAIN
+in[10] => out[5].DATAIN
+in[11] => out[4].DATAIN
+in[12] => out[3].DATAIN
+in[13] => out[2].DATAIN
+in[14] => out[1].DATAIN
+in[15] => out[0].DATAIN
+out[0] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in[14].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in[13].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in[12].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= in[11].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= in[10].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= in[9].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= in[7].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= in[6].DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|mux16Bit2x1:mux1
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in1[4] => out.DATAB
+in1[5] => out.DATAB
+in1[6] => out.DATAB
+in1[7] => out.DATAB
+in1[8] => out.DATAB
+in1[9] => out.DATAB
+in1[10] => out.DATAB
+in1[11] => out.DATAB
+in1[12] => out.DATAB
+in1[13] => out.DATAB
+in1[14] => out.DATAB
+in1[15] => out.DATAB
+in2[0] => out.DATAA
+in2[1] => out.DATAA
+in2[2] => out.DATAA
+in2[3] => out.DATAA
+in2[4] => out.DATAA
+in2[5] => out.DATAA
+in2[6] => out.DATAA
+in2[7] => out.DATAA
+in2[8] => out.DATAA
+in2[9] => out.DATAA
+in2[10] => out.DATAA
+in2[11] => out.DATAA
+in2[12] => out.DATAA
+in2[13] => out.DATAA
+in2[14] => out.DATAA
+in2[15] => out.DATAA
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+in[8] => in[8].IN1
+in[9] => in[9].IN1
+in[10] => in[10].IN1
+in[11] => in[11].IN1
+in[12] => in[12].IN1
+in[13] => in[13].IN1
+in[14] => in[14].IN1
+in[15] => in[15].IN1
+select[0] => select[0].IN1
+select[1] => select[1].IN1
+select[2] => select[2].IN1
+select[3] => select[3].IN1
+out[0] <= barrelShifterL4:l4.port2
+out[1] <= barrelShifterL4:l4.port2
+out[2] <= barrelShifterL4:l4.port2
+out[3] <= barrelShifterL4:l4.port2
+out[4] <= barrelShifterL4:l4.port2
+out[5] <= barrelShifterL4:l4.port2
+out[6] <= barrelShifterL4:l4.port2
+out[7] <= barrelShifterL4:l4.port2
+out[8] <= barrelShifterL4:l4.port2
+out[9] <= barrelShifterL4:l4.port2
+out[10] <= barrelShifterL4:l4.port2
+out[11] <= barrelShifterL4:l4.port2
+out[12] <= barrelShifterL4:l4.port2
+out[13] <= barrelShifterL4:l4.port2
+out[14] <= barrelShifterL4:l4.port2
+out[15] <= barrelShifterL4:l4.port2
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1
+in[0] => in[0].IN1
+in[1] => in[1].IN2
+in[2] => in[2].IN2
+in[3] => in[3].IN2
+in[4] => in[4].IN2
+in[5] => in[5].IN2
+in[6] => in[6].IN2
+in[7] => in[7].IN2
+in[8] => in[8].IN2
+in[9] => in[9].IN2
+in[10] => in[10].IN2
+in[11] => in[11].IN2
+in[12] => in[12].IN2
+in[13] => in[13].IN2
+in[14] => in[14].IN2
+in[15] => in[15].IN2
+select => select.IN16
+out[0] <= mux2x1:m1.port3
+out[1] <= mux2x1:m2.port3
+out[2] <= mux2x1:m3.port3
+out[3] <= mux2x1:m4.port3
+out[4] <= mux2x1:m5.port3
+out[5] <= mux2x1:m6.port3
+out[6] <= mux2x1:m7.port3
+out[7] <= mux2x1:m8.port3
+out[8] <= mux2x1:m9.port3
+out[9] <= mux2x1:m10.port3
+out[10] <= mux2x1:m11.port3
+out[11] <= mux2x1:m12.port3
+out[12] <= mux2x1:m13.port3
+out[13] <= mux2x1:m14.port3
+out[14] <= mux2x1:m15.port3
+out[15] <= mux2x1:m16.port3
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m4
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m5
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m6
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m7
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m8
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m9
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m10
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m11
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m12
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m13
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m14
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m15
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL1:l1|mux2x1:m16
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN2
+in[3] => in[3].IN2
+in[4] => in[4].IN2
+in[5] => in[5].IN2
+in[6] => in[6].IN2
+in[7] => in[7].IN2
+in[8] => in[8].IN2
+in[9] => in[9].IN2
+in[10] => in[10].IN2
+in[11] => in[11].IN2
+in[12] => in[12].IN2
+in[13] => in[13].IN2
+in[14] => in[14].IN2
+in[15] => in[15].IN2
+select => select.IN16
+out[0] <= mux2x1:m1.port3
+out[1] <= mux2x1:m2.port3
+out[2] <= mux2x1:m3.port3
+out[3] <= mux2x1:m4.port3
+out[4] <= mux2x1:m5.port3
+out[5] <= mux2x1:m6.port3
+out[6] <= mux2x1:m7.port3
+out[7] <= mux2x1:m8.port3
+out[8] <= mux2x1:m9.port3
+out[9] <= mux2x1:m10.port3
+out[10] <= mux2x1:m11.port3
+out[11] <= mux2x1:m12.port3
+out[12] <= mux2x1:m13.port3
+out[13] <= mux2x1:m14.port3
+out[14] <= mux2x1:m15.port3
+out[15] <= mux2x1:m16.port3
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m4
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m5
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m6
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m7
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m8
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m9
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m10
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m11
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m12
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m13
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m14
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m15
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL2:l2|mux2x1:m16
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN2
+in[5] => in[5].IN2
+in[6] => in[6].IN2
+in[7] => in[7].IN2
+in[8] => in[8].IN2
+in[9] => in[9].IN2
+in[10] => in[10].IN2
+in[11] => in[11].IN2
+in[12] => in[12].IN2
+in[13] => in[13].IN2
+in[14] => in[14].IN2
+in[15] => in[15].IN2
+select => select.IN16
+out[0] <= mux2x1:m1.port3
+out[1] <= mux2x1:m2.port3
+out[2] <= mux2x1:m3.port3
+out[3] <= mux2x1:m4.port3
+out[4] <= mux2x1:m5.port3
+out[5] <= mux2x1:m6.port3
+out[6] <= mux2x1:m7.port3
+out[7] <= mux2x1:m8.port3
+out[8] <= mux2x1:m9.port3
+out[9] <= mux2x1:m10.port3
+out[10] <= mux2x1:m11.port3
+out[11] <= mux2x1:m12.port3
+out[12] <= mux2x1:m13.port3
+out[13] <= mux2x1:m14.port3
+out[14] <= mux2x1:m15.port3
+out[15] <= mux2x1:m16.port3
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m4
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m5
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m6
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m7
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m8
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m9
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m10
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m11
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m12
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m13
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m14
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m15
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL3:l3|mux2x1:m16
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4
+in[0] => in[0].IN1
+in[1] => in[1].IN1
+in[2] => in[2].IN1
+in[3] => in[3].IN1
+in[4] => in[4].IN1
+in[5] => in[5].IN1
+in[6] => in[6].IN1
+in[7] => in[7].IN1
+in[8] => in[8].IN2
+in[9] => in[9].IN2
+in[10] => in[10].IN2
+in[11] => in[11].IN2
+in[12] => in[12].IN2
+in[13] => in[13].IN2
+in[14] => in[14].IN2
+in[15] => in[15].IN2
+select => select.IN16
+out[0] <= mux2x1:m1.port3
+out[1] <= mux2x1:m2.port3
+out[2] <= mux2x1:m3.port3
+out[3] <= mux2x1:m4.port3
+out[4] <= mux2x1:m5.port3
+out[5] <= mux2x1:m6.port3
+out[6] <= mux2x1:m7.port3
+out[7] <= mux2x1:m8.port3
+out[8] <= mux2x1:m9.port3
+out[9] <= mux2x1:m10.port3
+out[10] <= mux2x1:m11.port3
+out[11] <= mux2x1:m12.port3
+out[12] <= mux2x1:m13.port3
+out[13] <= mux2x1:m14.port3
+out[14] <= mux2x1:m15.port3
+out[15] <= mux2x1:m16.port3
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m1
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m2
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m3
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m4
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m5
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m6
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m7
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m8
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m9
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m10
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m11
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m12
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m13
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m14
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m15
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|barrelShifter:bshifter|barrelShifterL4:l4|mux2x1:m16
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|mirror:mirror2
+in[0] => out[15].DATAIN
+in[1] => out[14].DATAIN
+in[2] => out[13].DATAIN
+in[3] => out[12].DATAIN
+in[4] => out[11].DATAIN
+in[5] => out[10].DATAIN
+in[6] => out[9].DATAIN
+in[7] => out[8].DATAIN
+in[8] => out[7].DATAIN
+in[9] => out[6].DATAIN
+in[10] => out[5].DATAIN
+in[11] => out[4].DATAIN
+in[12] => out[3].DATAIN
+in[13] => out[2].DATAIN
+in[14] => out[1].DATAIN
+in[15] => out[0].DATAIN
+out[0] <= in[15].DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= in[14].DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= in[13].DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= in[12].DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= in[11].DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= in[10].DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= in[9].DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= in[8].DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= in[7].DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= in[6].DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= in[5].DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= in[4].DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= in[3].DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= in[2].DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= in[1].DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= in[0].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|shifter:shtr|mux16Bit2x1:mux2
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in1[4] => out.DATAB
+in1[5] => out.DATAB
+in1[6] => out.DATAB
+in1[7] => out.DATAB
+in1[8] => out.DATAB
+in1[9] => out.DATAB
+in1[10] => out.DATAB
+in1[11] => out.DATAB
+in1[12] => out.DATAB
+in1[13] => out.DATAB
+in1[14] => out.DATAB
+in1[15] => out.DATAB
+in2[0] => out.DATAA
+in2[1] => out.DATAA
+in2[2] => out.DATAA
+in2[3] => out.DATAA
+in2[4] => out.DATAA
+in2[5] => out.DATAA
+in2[6] => out.DATAA
+in2[7] => out.DATAA
+in2[8] => out.DATAA
+in2[9] => out.DATAA
+in2[10] => out.DATAA
+in2[11] => out.DATAA
+in2[12] => out.DATAA
+in2[13] => out.DATAA
+in2[14] => out.DATAA
+in2[15] => out.DATAA
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|mux16Bit2x1:muxShifter
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in1[4] => out.DATAB
+in1[5] => out.DATAB
+in1[6] => out.DATAB
+in1[7] => out.DATAB
+in1[8] => out.DATAB
+in1[9] => out.DATAB
+in1[10] => out.DATAB
+in1[11] => out.DATAB
+in1[12] => out.DATAB
+in1[13] => out.DATAB
+in1[14] => out.DATAB
+in1[15] => out.DATAB
+in2[0] => out.DATAA
+in2[1] => out.DATAA
+in2[2] => out.DATAA
+in2[3] => out.DATAA
+in2[4] => out.DATAA
+in2[5] => out.DATAA
+in2[6] => out.DATAA
+in2[7] => out.DATAA
+in2[8] => out.DATAA
+in2[9] => out.DATAA
+in2[10] => out.DATAA
+in2[11] => out.DATAA
+in2[12] => out.DATAA
+in2[13] => out.DATAA
+in2[14] => out.DATAA
+in2[15] => out.DATAA
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|dataMemory:datamemory
+clock => memory[0][0].CLK
+clock => memory[0][1].CLK
+clock => memory[0][2].CLK
+clock => memory[0][3].CLK
+clock => memory[0][4].CLK
+clock => memory[0][5].CLK
+clock => memory[0][6].CLK
+clock => memory[0][7].CLK
+clock => memory[1][0].CLK
+clock => memory[1][1].CLK
+clock => memory[1][2].CLK
+clock => memory[1][3].CLK
+clock => memory[1][4].CLK
+clock => memory[1][5].CLK
+clock => memory[1][6].CLK
+clock => memory[1][7].CLK
+clock => memory[2][0].CLK
+clock => memory[2][1].CLK
+clock => memory[2][2].CLK
+clock => memory[2][3].CLK
+clock => memory[2][4].CLK
+clock => memory[2][5].CLK
+clock => memory[2][6].CLK
+clock => memory[2][7].CLK
+clock => memory[3][0].CLK
+clock => memory[3][1].CLK
+clock => memory[3][2].CLK
+clock => memory[3][3].CLK
+clock => memory[3][4].CLK
+clock => memory[3][5].CLK
+clock => memory[3][6].CLK
+clock => memory[3][7].CLK
+clock => memory[4][0].CLK
+clock => memory[4][1].CLK
+clock => memory[4][2].CLK
+clock => memory[4][3].CLK
+clock => memory[4][4].CLK
+clock => memory[4][5].CLK
+clock => memory[4][6].CLK
+clock => memory[4][7].CLK
+clock => memory[5][0].CLK
+clock => memory[5][1].CLK
+clock => memory[5][2].CLK
+clock => memory[5][3].CLK
+clock => memory[5][4].CLK
+clock => memory[5][5].CLK
+clock => memory[5][6].CLK
+clock => memory[5][7].CLK
+clock => memory[6][0].CLK
+clock => memory[6][1].CLK
+clock => memory[6][2].CLK
+clock => memory[6][3].CLK
+clock => memory[6][4].CLK
+clock => memory[6][5].CLK
+clock => memory[6][6].CLK
+clock => memory[6][7].CLK
+clock => memory[7][0].CLK
+clock => memory[7][1].CLK
+clock => memory[7][2].CLK
+clock => memory[7][3].CLK
+clock => memory[7][4].CLK
+clock => memory[7][5].CLK
+clock => memory[7][6].CLK
+clock => memory[7][7].CLK
+clock => memory[8][0].CLK
+clock => memory[8][1].CLK
+clock => memory[8][2].CLK
+clock => memory[8][3].CLK
+clock => memory[8][4].CLK
+clock => memory[8][5].CLK
+clock => memory[8][6].CLK
+clock => memory[8][7].CLK
+clock => memory[9][0].CLK
+clock => memory[9][1].CLK
+clock => memory[9][2].CLK
+clock => memory[9][3].CLK
+clock => memory[9][4].CLK
+clock => memory[9][5].CLK
+clock => memory[9][6].CLK
+clock => memory[9][7].CLK
+clock => memory[10][0].CLK
+clock => memory[10][1].CLK
+clock => memory[10][2].CLK
+clock => memory[10][3].CLK
+clock => memory[10][4].CLK
+clock => memory[10][5].CLK
+clock => memory[10][6].CLK
+clock => memory[10][7].CLK
+clock => memory[11][0].CLK
+clock => memory[11][1].CLK
+clock => memory[11][2].CLK
+clock => memory[11][3].CLK
+clock => memory[11][4].CLK
+clock => memory[11][5].CLK
+clock => memory[11][6].CLK
+clock => memory[11][7].CLK
+clock => memory[12][0].CLK
+clock => memory[12][1].CLK
+clock => memory[12][2].CLK
+clock => memory[12][3].CLK
+clock => memory[12][4].CLK
+clock => memory[12][5].CLK
+clock => memory[12][6].CLK
+clock => memory[12][7].CLK
+clock => memory[13][0].CLK
+clock => memory[13][1].CLK
+clock => memory[13][2].CLK
+clock => memory[13][3].CLK
+clock => memory[13][4].CLK
+clock => memory[13][5].CLK
+clock => memory[13][6].CLK
+clock => memory[13][7].CLK
+clock => memory[14][0].CLK
+clock => memory[14][1].CLK
+clock => memory[14][2].CLK
+clock => memory[14][3].CLK
+clock => memory[14][4].CLK
+clock => memory[14][5].CLK
+clock => memory[14][6].CLK
+clock => memory[14][7].CLK
+clock => memory[15][0].CLK
+clock => memory[15][1].CLK
+clock => memory[15][2].CLK
+clock => memory[15][3].CLK
+clock => memory[15][4].CLK
+clock => memory[15][5].CLK
+clock => memory[15][6].CLK
+clock => memory[15][7].CLK
+clock => memory[16][0].CLK
+clock => memory[16][1].CLK
+clock => memory[16][2].CLK
+clock => memory[16][3].CLK
+clock => memory[16][4].CLK
+clock => memory[16][5].CLK
+clock => memory[16][6].CLK
+clock => memory[16][7].CLK
+clock => memory[17][0].CLK
+clock => memory[17][1].CLK
+clock => memory[17][2].CLK
+clock => memory[17][3].CLK
+clock => memory[17][4].CLK
+clock => memory[17][5].CLK
+clock => memory[17][6].CLK
+clock => memory[17][7].CLK
+clock => memory[18][0].CLK
+clock => memory[18][1].CLK
+clock => memory[18][2].CLK
+clock => memory[18][3].CLK
+clock => memory[18][4].CLK
+clock => memory[18][5].CLK
+clock => memory[18][6].CLK
+clock => memory[18][7].CLK
+clock => memory[19][0].CLK
+clock => memory[19][1].CLK
+clock => memory[19][2].CLK
+clock => memory[19][3].CLK
+clock => memory[19][4].CLK
+clock => memory[19][5].CLK
+clock => memory[19][6].CLK
+clock => memory[19][7].CLK
+clock => memory[20][0].CLK
+clock => memory[20][1].CLK
+clock => memory[20][2].CLK
+clock => memory[20][3].CLK
+clock => memory[20][4].CLK
+clock => memory[20][5].CLK
+clock => memory[20][6].CLK
+clock => memory[20][7].CLK
+clock => memory[21][0].CLK
+clock => memory[21][1].CLK
+clock => memory[21][2].CLK
+clock => memory[21][3].CLK
+clock => memory[21][4].CLK
+clock => memory[21][5].CLK
+clock => memory[21][6].CLK
+clock => memory[21][7].CLK
+clock => memory[22][0].CLK
+clock => memory[22][1].CLK
+clock => memory[22][2].CLK
+clock => memory[22][3].CLK
+clock => memory[22][4].CLK
+clock => memory[22][5].CLK
+clock => memory[22][6].CLK
+clock => memory[22][7].CLK
+clock => memory[23][0].CLK
+clock => memory[23][1].CLK
+clock => memory[23][2].CLK
+clock => memory[23][3].CLK
+clock => memory[23][4].CLK
+clock => memory[23][5].CLK
+clock => memory[23][6].CLK
+clock => memory[23][7].CLK
+clock => memory[24][0].CLK
+clock => memory[24][1].CLK
+clock => memory[24][2].CLK
+clock => memory[24][3].CLK
+clock => memory[24][4].CLK
+clock => memory[24][5].CLK
+clock => memory[24][6].CLK
+clock => memory[24][7].CLK
+clock => memory[25][0].CLK
+clock => memory[25][1].CLK
+clock => memory[25][2].CLK
+clock => memory[25][3].CLK
+clock => memory[25][4].CLK
+clock => memory[25][5].CLK
+clock => memory[25][6].CLK
+clock => memory[25][7].CLK
+clock => memory[26][0].CLK
+clock => memory[26][1].CLK
+clock => memory[26][2].CLK
+clock => memory[26][3].CLK
+clock => memory[26][4].CLK
+clock => memory[26][5].CLK
+clock => memory[26][6].CLK
+clock => memory[26][7].CLK
+clock => memory[27][0].CLK
+clock => memory[27][1].CLK
+clock => memory[27][2].CLK
+clock => memory[27][3].CLK
+clock => memory[27][4].CLK
+clock => memory[27][5].CLK
+clock => memory[27][6].CLK
+clock => memory[27][7].CLK
+clock => memory[28][0].CLK
+clock => memory[28][1].CLK
+clock => memory[28][2].CLK
+clock => memory[28][3].CLK
+clock => memory[28][4].CLK
+clock => memory[28][5].CLK
+clock => memory[28][6].CLK
+clock => memory[28][7].CLK
+clock => memory[29][0].CLK
+clock => memory[29][1].CLK
+clock => memory[29][2].CLK
+clock => memory[29][3].CLK
+clock => memory[29][4].CLK
+clock => memory[29][5].CLK
+clock => memory[29][6].CLK
+clock => memory[29][7].CLK
+clock => memory[30][0].CLK
+clock => memory[30][1].CLK
+clock => memory[30][2].CLK
+clock => memory[30][3].CLK
+clock => memory[30][4].CLK
+clock => memory[30][5].CLK
+clock => memory[30][6].CLK
+clock => memory[30][7].CLK
+clock => memory[31][0].CLK
+clock => memory[31][1].CLK
+clock => memory[31][2].CLK
+clock => memory[31][3].CLK
+clock => memory[31][4].CLK
+clock => memory[31][5].CLK
+clock => memory[31][6].CLK
+clock => memory[31][7].CLK
+clock => memory[32][0].CLK
+clock => memory[32][1].CLK
+clock => memory[32][2].CLK
+clock => memory[32][3].CLK
+clock => memory[32][4].CLK
+clock => memory[32][5].CLK
+clock => memory[32][6].CLK
+clock => memory[32][7].CLK
+clock => memory[33][0].CLK
+clock => memory[33][1].CLK
+clock => memory[33][2].CLK
+clock => memory[33][3].CLK
+clock => memory[33][4].CLK
+clock => memory[33][5].CLK
+clock => memory[33][6].CLK
+clock => memory[33][7].CLK
+clock => memory[34][0].CLK
+clock => memory[34][1].CLK
+clock => memory[34][2].CLK
+clock => memory[34][3].CLK
+clock => memory[34][4].CLK
+clock => memory[34][5].CLK
+clock => memory[34][6].CLK
+clock => memory[34][7].CLK
+clock => memory[35][0].CLK
+clock => memory[35][1].CLK
+clock => memory[35][2].CLK
+clock => memory[35][3].CLK
+clock => memory[35][4].CLK
+clock => memory[35][5].CLK
+clock => memory[35][6].CLK
+clock => memory[35][7].CLK
+clock => memory[36][0].CLK
+clock => memory[36][1].CLK
+clock => memory[36][2].CLK
+clock => memory[36][3].CLK
+clock => memory[36][4].CLK
+clock => memory[36][5].CLK
+clock => memory[36][6].CLK
+clock => memory[36][7].CLK
+clock => memory[37][0].CLK
+clock => memory[37][1].CLK
+clock => memory[37][2].CLK
+clock => memory[37][3].CLK
+clock => memory[37][4].CLK
+clock => memory[37][5].CLK
+clock => memory[37][6].CLK
+clock => memory[37][7].CLK
+clock => memory[38][0].CLK
+clock => memory[38][1].CLK
+clock => memory[38][2].CLK
+clock => memory[38][3].CLK
+clock => memory[38][4].CLK
+clock => memory[38][5].CLK
+clock => memory[38][6].CLK
+clock => memory[38][7].CLK
+clock => memory[39][0].CLK
+clock => memory[39][1].CLK
+clock => memory[39][2].CLK
+clock => memory[39][3].CLK
+clock => memory[39][4].CLK
+clock => memory[39][5].CLK
+clock => memory[39][6].CLK
+clock => memory[39][7].CLK
+clock => memory[40][0].CLK
+clock => memory[40][1].CLK
+clock => memory[40][2].CLK
+clock => memory[40][3].CLK
+clock => memory[40][4].CLK
+clock => memory[40][5].CLK
+clock => memory[40][6].CLK
+clock => memory[40][7].CLK
+clock => memory[41][0].CLK
+clock => memory[41][1].CLK
+clock => memory[41][2].CLK
+clock => memory[41][3].CLK
+clock => memory[41][4].CLK
+clock => memory[41][5].CLK
+clock => memory[41][6].CLK
+clock => memory[41][7].CLK
+clock => memory[42][0].CLK
+clock => memory[42][1].CLK
+clock => memory[42][2].CLK
+clock => memory[42][3].CLK
+clock => memory[42][4].CLK
+clock => memory[42][5].CLK
+clock => memory[42][6].CLK
+clock => memory[42][7].CLK
+clock => memory[43][0].CLK
+clock => memory[43][1].CLK
+clock => memory[43][2].CLK
+clock => memory[43][3].CLK
+clock => memory[43][4].CLK
+clock => memory[43][5].CLK
+clock => memory[43][6].CLK
+clock => memory[43][7].CLK
+clock => memory[44][0].CLK
+clock => memory[44][1].CLK
+clock => memory[44][2].CLK
+clock => memory[44][3].CLK
+clock => memory[44][4].CLK
+clock => memory[44][5].CLK
+clock => memory[44][6].CLK
+clock => memory[44][7].CLK
+clock => memory[45][0].CLK
+clock => memory[45][1].CLK
+clock => memory[45][2].CLK
+clock => memory[45][3].CLK
+clock => memory[45][4].CLK
+clock => memory[45][5].CLK
+clock => memory[45][6].CLK
+clock => memory[45][7].CLK
+clock => memory[46][0].CLK
+clock => memory[46][1].CLK
+clock => memory[46][2].CLK
+clock => memory[46][3].CLK
+clock => memory[46][4].CLK
+clock => memory[46][5].CLK
+clock => memory[46][6].CLK
+clock => memory[46][7].CLK
+clock => memory[47][0].CLK
+clock => memory[47][1].CLK
+clock => memory[47][2].CLK
+clock => memory[47][3].CLK
+clock => memory[47][4].CLK
+clock => memory[47][5].CLK
+clock => memory[47][6].CLK
+clock => memory[47][7].CLK
+clock => memory[48][0].CLK
+clock => memory[48][1].CLK
+clock => memory[48][2].CLK
+clock => memory[48][3].CLK
+clock => memory[48][4].CLK
+clock => memory[48][5].CLK
+clock => memory[48][6].CLK
+clock => memory[48][7].CLK
+clock => memory[49][0].CLK
+clock => memory[49][1].CLK
+clock => memory[49][2].CLK
+clock => memory[49][3].CLK
+clock => memory[49][4].CLK
+clock => memory[49][5].CLK
+clock => memory[49][6].CLK
+clock => memory[49][7].CLK
+clock => memory[50][0].CLK
+clock => memory[50][1].CLK
+clock => memory[50][2].CLK
+clock => memory[50][3].CLK
+clock => memory[50][4].CLK
+clock => memory[50][5].CLK
+clock => memory[50][6].CLK
+clock => memory[50][7].CLK
+clock => memory[51][0].CLK
+clock => memory[51][1].CLK
+clock => memory[51][2].CLK
+clock => memory[51][3].CLK
+clock => memory[51][4].CLK
+clock => memory[51][5].CLK
+clock => memory[51][6].CLK
+clock => memory[51][7].CLK
+clock => memory[52][0].CLK
+clock => memory[52][1].CLK
+clock => memory[52][2].CLK
+clock => memory[52][3].CLK
+clock => memory[52][4].CLK
+clock => memory[52][5].CLK
+clock => memory[52][6].CLK
+clock => memory[52][7].CLK
+clock => memory[53][0].CLK
+clock => memory[53][1].CLK
+clock => memory[53][2].CLK
+clock => memory[53][3].CLK
+clock => memory[53][4].CLK
+clock => memory[53][5].CLK
+clock => memory[53][6].CLK
+clock => memory[53][7].CLK
+clock => memory[54][0].CLK
+clock => memory[54][1].CLK
+clock => memory[54][2].CLK
+clock => memory[54][3].CLK
+clock => memory[54][4].CLK
+clock => memory[54][5].CLK
+clock => memory[54][6].CLK
+clock => memory[54][7].CLK
+clock => memory[55][0].CLK
+clock => memory[55][1].CLK
+clock => memory[55][2].CLK
+clock => memory[55][3].CLK
+clock => memory[55][4].CLK
+clock => memory[55][5].CLK
+clock => memory[55][6].CLK
+clock => memory[55][7].CLK
+clock => memory[56][0].CLK
+clock => memory[56][1].CLK
+clock => memory[56][2].CLK
+clock => memory[56][3].CLK
+clock => memory[56][4].CLK
+clock => memory[56][5].CLK
+clock => memory[56][6].CLK
+clock => memory[56][7].CLK
+clock => memory[57][0].CLK
+clock => memory[57][1].CLK
+clock => memory[57][2].CLK
+clock => memory[57][3].CLK
+clock => memory[57][4].CLK
+clock => memory[57][5].CLK
+clock => memory[57][6].CLK
+clock => memory[57][7].CLK
+clock => memory[58][0].CLK
+clock => memory[58][1].CLK
+clock => memory[58][2].CLK
+clock => memory[58][3].CLK
+clock => memory[58][4].CLK
+clock => memory[58][5].CLK
+clock => memory[58][6].CLK
+clock => memory[58][7].CLK
+clock => memory[59][0].CLK
+clock => memory[59][1].CLK
+clock => memory[59][2].CLK
+clock => memory[59][3].CLK
+clock => memory[59][4].CLK
+clock => memory[59][5].CLK
+clock => memory[59][6].CLK
+clock => memory[59][7].CLK
+clock => memory[60][0].CLK
+clock => memory[60][1].CLK
+clock => memory[60][2].CLK
+clock => memory[60][3].CLK
+clock => memory[60][4].CLK
+clock => memory[60][5].CLK
+clock => memory[60][6].CLK
+clock => memory[60][7].CLK
+clock => memory[61][0].CLK
+clock => memory[61][1].CLK
+clock => memory[61][2].CLK
+clock => memory[61][3].CLK
+clock => memory[61][4].CLK
+clock => memory[61][5].CLK
+clock => memory[61][6].CLK
+clock => memory[61][7].CLK
+clock => memory[62][0].CLK
+clock => memory[62][1].CLK
+clock => memory[62][2].CLK
+clock => memory[62][3].CLK
+clock => memory[62][4].CLK
+clock => memory[62][5].CLK
+clock => memory[62][6].CLK
+clock => memory[62][7].CLK
+clock => memory[63][0].CLK
+clock => memory[63][1].CLK
+clock => memory[63][2].CLK
+clock => memory[63][3].CLK
+clock => memory[63][4].CLK
+clock => memory[63][5].CLK
+clock => memory[63][6].CLK
+clock => memory[63][7].CLK
+clock => memory[64][0].CLK
+clock => memory[64][1].CLK
+clock => memory[64][2].CLK
+clock => memory[64][3].CLK
+clock => memory[64][4].CLK
+clock => memory[64][5].CLK
+clock => memory[64][6].CLK
+clock => memory[64][7].CLK
+clock => memory[65][0].CLK
+clock => memory[65][1].CLK
+clock => memory[65][2].CLK
+clock => memory[65][3].CLK
+clock => memory[65][4].CLK
+clock => memory[65][5].CLK
+clock => memory[65][6].CLK
+clock => memory[65][7].CLK
+clock => memory[66][0].CLK
+clock => memory[66][1].CLK
+clock => memory[66][2].CLK
+clock => memory[66][3].CLK
+clock => memory[66][4].CLK
+clock => memory[66][5].CLK
+clock => memory[66][6].CLK
+clock => memory[66][7].CLK
+clock => memory[67][0].CLK
+clock => memory[67][1].CLK
+clock => memory[67][2].CLK
+clock => memory[67][3].CLK
+clock => memory[67][4].CLK
+clock => memory[67][5].CLK
+clock => memory[67][6].CLK
+clock => memory[67][7].CLK
+clock => memory[68][0].CLK
+clock => memory[68][1].CLK
+clock => memory[68][2].CLK
+clock => memory[68][3].CLK
+clock => memory[68][4].CLK
+clock => memory[68][5].CLK
+clock => memory[68][6].CLK
+clock => memory[68][7].CLK
+clock => memory[69][0].CLK
+clock => memory[69][1].CLK
+clock => memory[69][2].CLK
+clock => memory[69][3].CLK
+clock => memory[69][4].CLK
+clock => memory[69][5].CLK
+clock => memory[69][6].CLK
+clock => memory[69][7].CLK
+clock => memory[70][0].CLK
+clock => memory[70][1].CLK
+clock => memory[70][2].CLK
+clock => memory[70][3].CLK
+clock => memory[70][4].CLK
+clock => memory[70][5].CLK
+clock => memory[70][6].CLK
+clock => memory[70][7].CLK
+clock => memory[71][0].CLK
+clock => memory[71][1].CLK
+clock => memory[71][2].CLK
+clock => memory[71][3].CLK
+clock => memory[71][4].CLK
+clock => memory[71][5].CLK
+clock => memory[71][6].CLK
+clock => memory[71][7].CLK
+clock => memory[72][0].CLK
+clock => memory[72][1].CLK
+clock => memory[72][2].CLK
+clock => memory[72][3].CLK
+clock => memory[72][4].CLK
+clock => memory[72][5].CLK
+clock => memory[72][6].CLK
+clock => memory[72][7].CLK
+clock => memory[73][0].CLK
+clock => memory[73][1].CLK
+clock => memory[73][2].CLK
+clock => memory[73][3].CLK
+clock => memory[73][4].CLK
+clock => memory[73][5].CLK
+clock => memory[73][6].CLK
+clock => memory[73][7].CLK
+clock => memory[74][0].CLK
+clock => memory[74][1].CLK
+clock => memory[74][2].CLK
+clock => memory[74][3].CLK
+clock => memory[74][4].CLK
+clock => memory[74][5].CLK
+clock => memory[74][6].CLK
+clock => memory[74][7].CLK
+clock => memory[75][0].CLK
+clock => memory[75][1].CLK
+clock => memory[75][2].CLK
+clock => memory[75][3].CLK
+clock => memory[75][4].CLK
+clock => memory[75][5].CLK
+clock => memory[75][6].CLK
+clock => memory[75][7].CLK
+clock => memory[76][0].CLK
+clock => memory[76][1].CLK
+clock => memory[76][2].CLK
+clock => memory[76][3].CLK
+clock => memory[76][4].CLK
+clock => memory[76][5].CLK
+clock => memory[76][6].CLK
+clock => memory[76][7].CLK
+clock => memory[77][0].CLK
+clock => memory[77][1].CLK
+clock => memory[77][2].CLK
+clock => memory[77][3].CLK
+clock => memory[77][4].CLK
+clock => memory[77][5].CLK
+clock => memory[77][6].CLK
+clock => memory[77][7].CLK
+clock => memory[78][0].CLK
+clock => memory[78][1].CLK
+clock => memory[78][2].CLK
+clock => memory[78][3].CLK
+clock => memory[78][4].CLK
+clock => memory[78][5].CLK
+clock => memory[78][6].CLK
+clock => memory[78][7].CLK
+clock => memory[79][0].CLK
+clock => memory[79][1].CLK
+clock => memory[79][2].CLK
+clock => memory[79][3].CLK
+clock => memory[79][4].CLK
+clock => memory[79][5].CLK
+clock => memory[79][6].CLK
+clock => memory[79][7].CLK
+clock => memory[80][0].CLK
+clock => memory[80][1].CLK
+clock => memory[80][2].CLK
+clock => memory[80][3].CLK
+clock => memory[80][4].CLK
+clock => memory[80][5].CLK
+clock => memory[80][6].CLK
+clock => memory[80][7].CLK
+clock => memory[81][0].CLK
+clock => memory[81][1].CLK
+clock => memory[81][2].CLK
+clock => memory[81][3].CLK
+clock => memory[81][4].CLK
+clock => memory[81][5].CLK
+clock => memory[81][6].CLK
+clock => memory[81][7].CLK
+clock => memory[82][0].CLK
+clock => memory[82][1].CLK
+clock => memory[82][2].CLK
+clock => memory[82][3].CLK
+clock => memory[82][4].CLK
+clock => memory[82][5].CLK
+clock => memory[82][6].CLK
+clock => memory[82][7].CLK
+clock => memory[83][0].CLK
+clock => memory[83][1].CLK
+clock => memory[83][2].CLK
+clock => memory[83][3].CLK
+clock => memory[83][4].CLK
+clock => memory[83][5].CLK
+clock => memory[83][6].CLK
+clock => memory[83][7].CLK
+clock => memory[84][0].CLK
+clock => memory[84][1].CLK
+clock => memory[84][2].CLK
+clock => memory[84][3].CLK
+clock => memory[84][4].CLK
+clock => memory[84][5].CLK
+clock => memory[84][6].CLK
+clock => memory[84][7].CLK
+clock => memory[85][0].CLK
+clock => memory[85][1].CLK
+clock => memory[85][2].CLK
+clock => memory[85][3].CLK
+clock => memory[85][4].CLK
+clock => memory[85][5].CLK
+clock => memory[85][6].CLK
+clock => memory[85][7].CLK
+clock => memory[86][0].CLK
+clock => memory[86][1].CLK
+clock => memory[86][2].CLK
+clock => memory[86][3].CLK
+clock => memory[86][4].CLK
+clock => memory[86][5].CLK
+clock => memory[86][6].CLK
+clock => memory[86][7].CLK
+clock => memory[87][0].CLK
+clock => memory[87][1].CLK
+clock => memory[87][2].CLK
+clock => memory[87][3].CLK
+clock => memory[87][4].CLK
+clock => memory[87][5].CLK
+clock => memory[87][6].CLK
+clock => memory[87][7].CLK
+clock => memory[88][0].CLK
+clock => memory[88][1].CLK
+clock => memory[88][2].CLK
+clock => memory[88][3].CLK
+clock => memory[88][4].CLK
+clock => memory[88][5].CLK
+clock => memory[88][6].CLK
+clock => memory[88][7].CLK
+clock => memory[89][0].CLK
+clock => memory[89][1].CLK
+clock => memory[89][2].CLK
+clock => memory[89][3].CLK
+clock => memory[89][4].CLK
+clock => memory[89][5].CLK
+clock => memory[89][6].CLK
+clock => memory[89][7].CLK
+clock => memory[90][0].CLK
+clock => memory[90][1].CLK
+clock => memory[90][2].CLK
+clock => memory[90][3].CLK
+clock => memory[90][4].CLK
+clock => memory[90][5].CLK
+clock => memory[90][6].CLK
+clock => memory[90][7].CLK
+clock => memory[91][0].CLK
+clock => memory[91][1].CLK
+clock => memory[91][2].CLK
+clock => memory[91][3].CLK
+clock => memory[91][4].CLK
+clock => memory[91][5].CLK
+clock => memory[91][6].CLK
+clock => memory[91][7].CLK
+clock => memory[92][0].CLK
+clock => memory[92][1].CLK
+clock => memory[92][2].CLK
+clock => memory[92][3].CLK
+clock => memory[92][4].CLK
+clock => memory[92][5].CLK
+clock => memory[92][6].CLK
+clock => memory[92][7].CLK
+clock => memory[93][0].CLK
+clock => memory[93][1].CLK
+clock => memory[93][2].CLK
+clock => memory[93][3].CLK
+clock => memory[93][4].CLK
+clock => memory[93][5].CLK
+clock => memory[93][6].CLK
+clock => memory[93][7].CLK
+clock => memory[94][0].CLK
+clock => memory[94][1].CLK
+clock => memory[94][2].CLK
+clock => memory[94][3].CLK
+clock => memory[94][4].CLK
+clock => memory[94][5].CLK
+clock => memory[94][6].CLK
+clock => memory[94][7].CLK
+clock => memory[95][0].CLK
+clock => memory[95][1].CLK
+clock => memory[95][2].CLK
+clock => memory[95][3].CLK
+clock => memory[95][4].CLK
+clock => memory[95][5].CLK
+clock => memory[95][6].CLK
+clock => memory[95][7].CLK
+clock => memory[96][0].CLK
+clock => memory[96][1].CLK
+clock => memory[96][2].CLK
+clock => memory[96][3].CLK
+clock => memory[96][4].CLK
+clock => memory[96][5].CLK
+clock => memory[96][6].CLK
+clock => memory[96][7].CLK
+clock => memory[97][0].CLK
+clock => memory[97][1].CLK
+clock => memory[97][2].CLK
+clock => memory[97][3].CLK
+clock => memory[97][4].CLK
+clock => memory[97][5].CLK
+clock => memory[97][6].CLK
+clock => memory[97][7].CLK
+clock => memory[98][0].CLK
+clock => memory[98][1].CLK
+clock => memory[98][2].CLK
+clock => memory[98][3].CLK
+clock => memory[98][4].CLK
+clock => memory[98][5].CLK
+clock => memory[98][6].CLK
+clock => memory[98][7].CLK
+clock => memory[99][0].CLK
+clock => memory[99][1].CLK
+clock => memory[99][2].CLK
+clock => memory[99][3].CLK
+clock => memory[99][4].CLK
+clock => memory[99][5].CLK
+clock => memory[99][6].CLK
+clock => memory[99][7].CLK
+clock => memory[100][0].CLK
+clock => memory[100][1].CLK
+clock => memory[100][2].CLK
+clock => memory[100][3].CLK
+clock => memory[100][4].CLK
+clock => memory[100][5].CLK
+clock => memory[100][6].CLK
+clock => memory[100][7].CLK
+memWrite => memory[0][0].ENA
+memWrite => memory[0][1].ENA
+memWrite => memory[0][2].ENA
+memWrite => memory[0][3].ENA
+memWrite => memory[0][4].ENA
+memWrite => memory[0][5].ENA
+memWrite => memory[0][6].ENA
+memWrite => memory[0][7].ENA
+memWrite => memory[1][0].ENA
+memWrite => memory[1][1].ENA
+memWrite => memory[1][2].ENA
+memWrite => memory[1][3].ENA
+memWrite => memory[1][4].ENA
+memWrite => memory[1][5].ENA
+memWrite => memory[1][6].ENA
+memWrite => memory[1][7].ENA
+memWrite => memory[2][0].ENA
+memWrite => memory[2][1].ENA
+memWrite => memory[2][2].ENA
+memWrite => memory[2][3].ENA
+memWrite => memory[2][4].ENA
+memWrite => memory[2][5].ENA
+memWrite => memory[2][6].ENA
+memWrite => memory[2][7].ENA
+memWrite => memory[3][0].ENA
+memWrite => memory[3][1].ENA
+memWrite => memory[3][2].ENA
+memWrite => memory[3][3].ENA
+memWrite => memory[3][4].ENA
+memWrite => memory[3][5].ENA
+memWrite => memory[3][6].ENA
+memWrite => memory[3][7].ENA
+memWrite => memory[4][0].ENA
+memWrite => memory[4][1].ENA
+memWrite => memory[4][2].ENA
+memWrite => memory[4][3].ENA
+memWrite => memory[4][4].ENA
+memWrite => memory[4][5].ENA
+memWrite => memory[4][6].ENA
+memWrite => memory[4][7].ENA
+memWrite => memory[5][0].ENA
+memWrite => memory[5][1].ENA
+memWrite => memory[5][2].ENA
+memWrite => memory[5][3].ENA
+memWrite => memory[5][4].ENA
+memWrite => memory[5][5].ENA
+memWrite => memory[5][6].ENA
+memWrite => memory[5][7].ENA
+memWrite => memory[6][0].ENA
+memWrite => memory[6][1].ENA
+memWrite => memory[6][2].ENA
+memWrite => memory[6][3].ENA
+memWrite => memory[6][4].ENA
+memWrite => memory[6][5].ENA
+memWrite => memory[6][6].ENA
+memWrite => memory[6][7].ENA
+memWrite => memory[7][0].ENA
+memWrite => memory[7][1].ENA
+memWrite => memory[7][2].ENA
+memWrite => memory[7][3].ENA
+memWrite => memory[7][4].ENA
+memWrite => memory[7][5].ENA
+memWrite => memory[7][6].ENA
+memWrite => memory[7][7].ENA
+memWrite => memory[8][0].ENA
+memWrite => memory[8][1].ENA
+memWrite => memory[8][2].ENA
+memWrite => memory[8][3].ENA
+memWrite => memory[8][4].ENA
+memWrite => memory[8][5].ENA
+memWrite => memory[8][6].ENA
+memWrite => memory[8][7].ENA
+memWrite => memory[9][0].ENA
+memWrite => memory[9][1].ENA
+memWrite => memory[9][2].ENA
+memWrite => memory[9][3].ENA
+memWrite => memory[9][4].ENA
+memWrite => memory[9][5].ENA
+memWrite => memory[9][6].ENA
+memWrite => memory[9][7].ENA
+memWrite => memory[10][0].ENA
+memWrite => memory[10][1].ENA
+memWrite => memory[10][2].ENA
+memWrite => memory[10][3].ENA
+memWrite => memory[10][4].ENA
+memWrite => memory[10][5].ENA
+memWrite => memory[10][6].ENA
+memWrite => memory[10][7].ENA
+memWrite => memory[11][0].ENA
+memWrite => memory[11][1].ENA
+memWrite => memory[11][2].ENA
+memWrite => memory[11][3].ENA
+memWrite => memory[11][4].ENA
+memWrite => memory[11][5].ENA
+memWrite => memory[11][6].ENA
+memWrite => memory[11][7].ENA
+memWrite => memory[12][0].ENA
+memWrite => memory[12][1].ENA
+memWrite => memory[12][2].ENA
+memWrite => memory[12][3].ENA
+memWrite => memory[12][4].ENA
+memWrite => memory[12][5].ENA
+memWrite => memory[12][6].ENA
+memWrite => memory[12][7].ENA
+memWrite => memory[13][0].ENA
+memWrite => memory[13][1].ENA
+memWrite => memory[13][2].ENA
+memWrite => memory[13][3].ENA
+memWrite => memory[13][4].ENA
+memWrite => memory[13][5].ENA
+memWrite => memory[13][6].ENA
+memWrite => memory[13][7].ENA
+memWrite => memory[14][0].ENA
+memWrite => memory[14][1].ENA
+memWrite => memory[14][2].ENA
+memWrite => memory[14][3].ENA
+memWrite => memory[14][4].ENA
+memWrite => memory[14][5].ENA
+memWrite => memory[14][6].ENA
+memWrite => memory[14][7].ENA
+memWrite => memory[15][0].ENA
+memWrite => memory[15][1].ENA
+memWrite => memory[15][2].ENA
+memWrite => memory[15][3].ENA
+memWrite => memory[15][4].ENA
+memWrite => memory[15][5].ENA
+memWrite => memory[15][6].ENA
+memWrite => memory[15][7].ENA
+memWrite => memory[16][0].ENA
+memWrite => memory[16][1].ENA
+memWrite => memory[16][2].ENA
+memWrite => memory[16][3].ENA
+memWrite => memory[16][4].ENA
+memWrite => memory[16][5].ENA
+memWrite => memory[16][6].ENA
+memWrite => memory[16][7].ENA
+memWrite => memory[17][0].ENA
+memWrite => memory[17][1].ENA
+memWrite => memory[17][2].ENA
+memWrite => memory[17][3].ENA
+memWrite => memory[17][4].ENA
+memWrite => memory[17][5].ENA
+memWrite => memory[17][6].ENA
+memWrite => memory[17][7].ENA
+memWrite => memory[18][0].ENA
+memWrite => memory[18][1].ENA
+memWrite => memory[18][2].ENA
+memWrite => memory[18][3].ENA
+memWrite => memory[18][4].ENA
+memWrite => memory[18][5].ENA
+memWrite => memory[18][6].ENA
+memWrite => memory[18][7].ENA
+memWrite => memory[19][0].ENA
+memWrite => memory[19][1].ENA
+memWrite => memory[19][2].ENA
+memWrite => memory[19][3].ENA
+memWrite => memory[19][4].ENA
+memWrite => memory[19][5].ENA
+memWrite => memory[19][6].ENA
+memWrite => memory[19][7].ENA
+memWrite => memory[20][0].ENA
+memWrite => memory[20][1].ENA
+memWrite => memory[20][2].ENA
+memWrite => memory[20][3].ENA
+memWrite => memory[20][4].ENA
+memWrite => memory[20][5].ENA
+memWrite => memory[20][6].ENA
+memWrite => memory[20][7].ENA
+memWrite => memory[21][0].ENA
+memWrite => memory[21][1].ENA
+memWrite => memory[21][2].ENA
+memWrite => memory[21][3].ENA
+memWrite => memory[21][4].ENA
+memWrite => memory[21][5].ENA
+memWrite => memory[21][6].ENA
+memWrite => memory[21][7].ENA
+memWrite => memory[22][0].ENA
+memWrite => memory[22][1].ENA
+memWrite => memory[22][2].ENA
+memWrite => memory[22][3].ENA
+memWrite => memory[22][4].ENA
+memWrite => memory[22][5].ENA
+memWrite => memory[22][6].ENA
+memWrite => memory[22][7].ENA
+memWrite => memory[23][0].ENA
+memWrite => memory[23][1].ENA
+memWrite => memory[23][2].ENA
+memWrite => memory[23][3].ENA
+memWrite => memory[23][4].ENA
+memWrite => memory[23][5].ENA
+memWrite => memory[23][6].ENA
+memWrite => memory[23][7].ENA
+memWrite => memory[24][0].ENA
+memWrite => memory[24][1].ENA
+memWrite => memory[24][2].ENA
+memWrite => memory[24][3].ENA
+memWrite => memory[24][4].ENA
+memWrite => memory[24][5].ENA
+memWrite => memory[24][6].ENA
+memWrite => memory[24][7].ENA
+memWrite => memory[25][0].ENA
+memWrite => memory[25][1].ENA
+memWrite => memory[25][2].ENA
+memWrite => memory[25][3].ENA
+memWrite => memory[25][4].ENA
+memWrite => memory[25][5].ENA
+memWrite => memory[25][6].ENA
+memWrite => memory[25][7].ENA
+memWrite => memory[26][0].ENA
+memWrite => memory[26][1].ENA
+memWrite => memory[26][2].ENA
+memWrite => memory[26][3].ENA
+memWrite => memory[26][4].ENA
+memWrite => memory[26][5].ENA
+memWrite => memory[26][6].ENA
+memWrite => memory[26][7].ENA
+memWrite => memory[27][0].ENA
+memWrite => memory[27][1].ENA
+memWrite => memory[27][2].ENA
+memWrite => memory[27][3].ENA
+memWrite => memory[27][4].ENA
+memWrite => memory[27][5].ENA
+memWrite => memory[27][6].ENA
+memWrite => memory[27][7].ENA
+memWrite => memory[28][0].ENA
+memWrite => memory[28][1].ENA
+memWrite => memory[28][2].ENA
+memWrite => memory[28][3].ENA
+memWrite => memory[28][4].ENA
+memWrite => memory[28][5].ENA
+memWrite => memory[28][6].ENA
+memWrite => memory[28][7].ENA
+memWrite => memory[29][0].ENA
+memWrite => memory[29][1].ENA
+memWrite => memory[29][2].ENA
+memWrite => memory[29][3].ENA
+memWrite => memory[29][4].ENA
+memWrite => memory[29][5].ENA
+memWrite => memory[29][6].ENA
+memWrite => memory[29][7].ENA
+memWrite => memory[30][0].ENA
+memWrite => memory[30][1].ENA
+memWrite => memory[30][2].ENA
+memWrite => memory[30][3].ENA
+memWrite => memory[30][4].ENA
+memWrite => memory[30][5].ENA
+memWrite => memory[30][6].ENA
+memWrite => memory[30][7].ENA
+memWrite => memory[31][0].ENA
+memWrite => memory[31][1].ENA
+memWrite => memory[31][2].ENA
+memWrite => memory[31][3].ENA
+memWrite => memory[31][4].ENA
+memWrite => memory[31][5].ENA
+memWrite => memory[31][6].ENA
+memWrite => memory[31][7].ENA
+memWrite => memory[32][0].ENA
+memWrite => memory[32][1].ENA
+memWrite => memory[32][2].ENA
+memWrite => memory[32][3].ENA
+memWrite => memory[32][4].ENA
+memWrite => memory[32][5].ENA
+memWrite => memory[32][6].ENA
+memWrite => memory[32][7].ENA
+memWrite => memory[33][0].ENA
+memWrite => memory[33][1].ENA
+memWrite => memory[33][2].ENA
+memWrite => memory[33][3].ENA
+memWrite => memory[33][4].ENA
+memWrite => memory[33][5].ENA
+memWrite => memory[33][6].ENA
+memWrite => memory[33][7].ENA
+memWrite => memory[34][0].ENA
+memWrite => memory[34][1].ENA
+memWrite => memory[34][2].ENA
+memWrite => memory[34][3].ENA
+memWrite => memory[34][4].ENA
+memWrite => memory[34][5].ENA
+memWrite => memory[34][6].ENA
+memWrite => memory[34][7].ENA
+memWrite => memory[35][0].ENA
+memWrite => memory[35][1].ENA
+memWrite => memory[35][2].ENA
+memWrite => memory[35][3].ENA
+memWrite => memory[35][4].ENA
+memWrite => memory[35][5].ENA
+memWrite => memory[35][6].ENA
+memWrite => memory[35][7].ENA
+memWrite => memory[36][0].ENA
+memWrite => memory[36][1].ENA
+memWrite => memory[36][2].ENA
+memWrite => memory[36][3].ENA
+memWrite => memory[36][4].ENA
+memWrite => memory[36][5].ENA
+memWrite => memory[36][6].ENA
+memWrite => memory[36][7].ENA
+memWrite => memory[37][0].ENA
+memWrite => memory[37][1].ENA
+memWrite => memory[37][2].ENA
+memWrite => memory[37][3].ENA
+memWrite => memory[37][4].ENA
+memWrite => memory[37][5].ENA
+memWrite => memory[37][6].ENA
+memWrite => memory[37][7].ENA
+memWrite => memory[38][0].ENA
+memWrite => memory[38][1].ENA
+memWrite => memory[38][2].ENA
+memWrite => memory[38][3].ENA
+memWrite => memory[38][4].ENA
+memWrite => memory[38][5].ENA
+memWrite => memory[38][6].ENA
+memWrite => memory[38][7].ENA
+memWrite => memory[39][0].ENA
+memWrite => memory[39][1].ENA
+memWrite => memory[39][2].ENA
+memWrite => memory[39][3].ENA
+memWrite => memory[39][4].ENA
+memWrite => memory[39][5].ENA
+memWrite => memory[39][6].ENA
+memWrite => memory[39][7].ENA
+memWrite => memory[40][0].ENA
+memWrite => memory[40][1].ENA
+memWrite => memory[40][2].ENA
+memWrite => memory[40][3].ENA
+memWrite => memory[40][4].ENA
+memWrite => memory[40][5].ENA
+memWrite => memory[40][6].ENA
+memWrite => memory[40][7].ENA
+memWrite => memory[41][0].ENA
+memWrite => memory[41][1].ENA
+memWrite => memory[41][2].ENA
+memWrite => memory[41][3].ENA
+memWrite => memory[41][4].ENA
+memWrite => memory[41][5].ENA
+memWrite => memory[41][6].ENA
+memWrite => memory[41][7].ENA
+memWrite => memory[42][0].ENA
+memWrite => memory[42][1].ENA
+memWrite => memory[42][2].ENA
+memWrite => memory[42][3].ENA
+memWrite => memory[42][4].ENA
+memWrite => memory[42][5].ENA
+memWrite => memory[42][6].ENA
+memWrite => memory[42][7].ENA
+memWrite => memory[43][0].ENA
+memWrite => memory[43][1].ENA
+memWrite => memory[43][2].ENA
+memWrite => memory[43][3].ENA
+memWrite => memory[43][4].ENA
+memWrite => memory[43][5].ENA
+memWrite => memory[43][6].ENA
+memWrite => memory[43][7].ENA
+memWrite => memory[44][0].ENA
+memWrite => memory[44][1].ENA
+memWrite => memory[44][2].ENA
+memWrite => memory[44][3].ENA
+memWrite => memory[44][4].ENA
+memWrite => memory[44][5].ENA
+memWrite => memory[44][6].ENA
+memWrite => memory[44][7].ENA
+memWrite => memory[45][0].ENA
+memWrite => memory[45][1].ENA
+memWrite => memory[45][2].ENA
+memWrite => memory[45][3].ENA
+memWrite => memory[45][4].ENA
+memWrite => memory[45][5].ENA
+memWrite => memory[45][6].ENA
+memWrite => memory[45][7].ENA
+memWrite => memory[46][0].ENA
+memWrite => memory[46][1].ENA
+memWrite => memory[46][2].ENA
+memWrite => memory[46][3].ENA
+memWrite => memory[46][4].ENA
+memWrite => memory[46][5].ENA
+memWrite => memory[46][6].ENA
+memWrite => memory[46][7].ENA
+memWrite => memory[47][0].ENA
+memWrite => memory[47][1].ENA
+memWrite => memory[47][2].ENA
+memWrite => memory[47][3].ENA
+memWrite => memory[47][4].ENA
+memWrite => memory[47][5].ENA
+memWrite => memory[47][6].ENA
+memWrite => memory[47][7].ENA
+memWrite => memory[48][0].ENA
+memWrite => memory[48][1].ENA
+memWrite => memory[48][2].ENA
+memWrite => memory[48][3].ENA
+memWrite => memory[48][4].ENA
+memWrite => memory[48][5].ENA
+memWrite => memory[48][6].ENA
+memWrite => memory[48][7].ENA
+memWrite => memory[49][0].ENA
+memWrite => memory[49][1].ENA
+memWrite => memory[49][2].ENA
+memWrite => memory[49][3].ENA
+memWrite => memory[49][4].ENA
+memWrite => memory[49][5].ENA
+memWrite => memory[49][6].ENA
+memWrite => memory[49][7].ENA
+memWrite => memory[50][0].ENA
+memWrite => memory[50][1].ENA
+memWrite => memory[50][2].ENA
+memWrite => memory[50][3].ENA
+memWrite => memory[50][4].ENA
+memWrite => memory[50][5].ENA
+memWrite => memory[50][6].ENA
+memWrite => memory[50][7].ENA
+memWrite => memory[51][0].ENA
+memWrite => memory[51][1].ENA
+memWrite => memory[51][2].ENA
+memWrite => memory[51][3].ENA
+memWrite => memory[51][4].ENA
+memWrite => memory[51][5].ENA
+memWrite => memory[51][6].ENA
+memWrite => memory[51][7].ENA
+memWrite => memory[52][0].ENA
+memWrite => memory[52][1].ENA
+memWrite => memory[52][2].ENA
+memWrite => memory[52][3].ENA
+memWrite => memory[52][4].ENA
+memWrite => memory[52][5].ENA
+memWrite => memory[52][6].ENA
+memWrite => memory[52][7].ENA
+memWrite => memory[53][0].ENA
+memWrite => memory[53][1].ENA
+memWrite => memory[53][2].ENA
+memWrite => memory[53][3].ENA
+memWrite => memory[53][4].ENA
+memWrite => memory[53][5].ENA
+memWrite => memory[53][6].ENA
+memWrite => memory[53][7].ENA
+memWrite => memory[54][0].ENA
+memWrite => memory[54][1].ENA
+memWrite => memory[54][2].ENA
+memWrite => memory[54][3].ENA
+memWrite => memory[54][4].ENA
+memWrite => memory[54][5].ENA
+memWrite => memory[54][6].ENA
+memWrite => memory[54][7].ENA
+memWrite => memory[55][0].ENA
+memWrite => memory[55][1].ENA
+memWrite => memory[55][2].ENA
+memWrite => memory[55][3].ENA
+memWrite => memory[55][4].ENA
+memWrite => memory[55][5].ENA
+memWrite => memory[55][6].ENA
+memWrite => memory[55][7].ENA
+memWrite => memory[56][0].ENA
+memWrite => memory[56][1].ENA
+memWrite => memory[56][2].ENA
+memWrite => memory[56][3].ENA
+memWrite => memory[56][4].ENA
+memWrite => memory[56][5].ENA
+memWrite => memory[56][6].ENA
+memWrite => memory[56][7].ENA
+memWrite => memory[57][0].ENA
+memWrite => memory[57][1].ENA
+memWrite => memory[57][2].ENA
+memWrite => memory[57][3].ENA
+memWrite => memory[57][4].ENA
+memWrite => memory[57][5].ENA
+memWrite => memory[57][6].ENA
+memWrite => memory[57][7].ENA
+memWrite => memory[58][0].ENA
+memWrite => memory[58][1].ENA
+memWrite => memory[58][2].ENA
+memWrite => memory[58][3].ENA
+memWrite => memory[58][4].ENA
+memWrite => memory[58][5].ENA
+memWrite => memory[58][6].ENA
+memWrite => memory[58][7].ENA
+memWrite => memory[59][0].ENA
+memWrite => memory[59][1].ENA
+memWrite => memory[59][2].ENA
+memWrite => memory[59][3].ENA
+memWrite => memory[59][4].ENA
+memWrite => memory[59][5].ENA
+memWrite => memory[59][6].ENA
+memWrite => memory[59][7].ENA
+memWrite => memory[60][0].ENA
+memWrite => memory[60][1].ENA
+memWrite => memory[60][2].ENA
+memWrite => memory[60][3].ENA
+memWrite => memory[60][4].ENA
+memWrite => memory[60][5].ENA
+memWrite => memory[60][6].ENA
+memWrite => memory[60][7].ENA
+memWrite => memory[61][0].ENA
+memWrite => memory[61][1].ENA
+memWrite => memory[61][2].ENA
+memWrite => memory[61][3].ENA
+memWrite => memory[61][4].ENA
+memWrite => memory[61][5].ENA
+memWrite => memory[61][6].ENA
+memWrite => memory[61][7].ENA
+memWrite => memory[62][0].ENA
+memWrite => memory[62][1].ENA
+memWrite => memory[62][2].ENA
+memWrite => memory[62][3].ENA
+memWrite => memory[62][4].ENA
+memWrite => memory[62][5].ENA
+memWrite => memory[62][6].ENA
+memWrite => memory[62][7].ENA
+memWrite => memory[63][0].ENA
+memWrite => memory[63][1].ENA
+memWrite => memory[63][2].ENA
+memWrite => memory[63][3].ENA
+memWrite => memory[63][4].ENA
+memWrite => memory[63][5].ENA
+memWrite => memory[63][6].ENA
+memWrite => memory[63][7].ENA
+memWrite => memory[64][0].ENA
+memWrite => memory[64][1].ENA
+memWrite => memory[64][2].ENA
+memWrite => memory[64][3].ENA
+memWrite => memory[64][4].ENA
+memWrite => memory[64][5].ENA
+memWrite => memory[64][6].ENA
+memWrite => memory[64][7].ENA
+memWrite => memory[65][0].ENA
+memWrite => memory[65][1].ENA
+memWrite => memory[65][2].ENA
+memWrite => memory[65][3].ENA
+memWrite => memory[65][4].ENA
+memWrite => memory[65][5].ENA
+memWrite => memory[65][6].ENA
+memWrite => memory[65][7].ENA
+memWrite => memory[66][0].ENA
+memWrite => memory[66][1].ENA
+memWrite => memory[66][2].ENA
+memWrite => memory[66][3].ENA
+memWrite => memory[66][4].ENA
+memWrite => memory[66][5].ENA
+memWrite => memory[66][6].ENA
+memWrite => memory[66][7].ENA
+memWrite => memory[67][0].ENA
+memWrite => memory[67][1].ENA
+memWrite => memory[67][2].ENA
+memWrite => memory[67][3].ENA
+memWrite => memory[67][4].ENA
+memWrite => memory[67][5].ENA
+memWrite => memory[67][6].ENA
+memWrite => memory[67][7].ENA
+memWrite => memory[68][0].ENA
+memWrite => memory[68][1].ENA
+memWrite => memory[68][2].ENA
+memWrite => memory[68][3].ENA
+memWrite => memory[68][4].ENA
+memWrite => memory[68][5].ENA
+memWrite => memory[68][6].ENA
+memWrite => memory[68][7].ENA
+memWrite => memory[69][0].ENA
+memWrite => memory[69][1].ENA
+memWrite => memory[69][2].ENA
+memWrite => memory[69][3].ENA
+memWrite => memory[69][4].ENA
+memWrite => memory[69][5].ENA
+memWrite => memory[69][6].ENA
+memWrite => memory[69][7].ENA
+memWrite => memory[70][0].ENA
+memWrite => memory[70][1].ENA
+memWrite => memory[70][2].ENA
+memWrite => memory[70][3].ENA
+memWrite => memory[70][4].ENA
+memWrite => memory[70][5].ENA
+memWrite => memory[70][6].ENA
+memWrite => memory[70][7].ENA
+memWrite => memory[71][0].ENA
+memWrite => memory[71][1].ENA
+memWrite => memory[71][2].ENA
+memWrite => memory[71][3].ENA
+memWrite => memory[71][4].ENA
+memWrite => memory[71][5].ENA
+memWrite => memory[71][6].ENA
+memWrite => memory[71][7].ENA
+memWrite => memory[72][0].ENA
+memWrite => memory[72][1].ENA
+memWrite => memory[72][2].ENA
+memWrite => memory[72][3].ENA
+memWrite => memory[72][4].ENA
+memWrite => memory[72][5].ENA
+memWrite => memory[72][6].ENA
+memWrite => memory[72][7].ENA
+memWrite => memory[73][0].ENA
+memWrite => memory[73][1].ENA
+memWrite => memory[73][2].ENA
+memWrite => memory[73][3].ENA
+memWrite => memory[73][4].ENA
+memWrite => memory[73][5].ENA
+memWrite => memory[73][6].ENA
+memWrite => memory[73][7].ENA
+memWrite => memory[74][0].ENA
+memWrite => memory[74][1].ENA
+memWrite => memory[74][2].ENA
+memWrite => memory[74][3].ENA
+memWrite => memory[74][4].ENA
+memWrite => memory[74][5].ENA
+memWrite => memory[74][6].ENA
+memWrite => memory[74][7].ENA
+memWrite => memory[75][0].ENA
+memWrite => memory[75][1].ENA
+memWrite => memory[75][2].ENA
+memWrite => memory[75][3].ENA
+memWrite => memory[75][4].ENA
+memWrite => memory[75][5].ENA
+memWrite => memory[75][6].ENA
+memWrite => memory[75][7].ENA
+memWrite => memory[76][0].ENA
+memWrite => memory[76][1].ENA
+memWrite => memory[76][2].ENA
+memWrite => memory[76][3].ENA
+memWrite => memory[76][4].ENA
+memWrite => memory[76][5].ENA
+memWrite => memory[76][6].ENA
+memWrite => memory[76][7].ENA
+memWrite => memory[77][0].ENA
+memWrite => memory[77][1].ENA
+memWrite => memory[77][2].ENA
+memWrite => memory[77][3].ENA
+memWrite => memory[77][4].ENA
+memWrite => memory[77][5].ENA
+memWrite => memory[77][6].ENA
+memWrite => memory[77][7].ENA
+memWrite => memory[78][0].ENA
+memWrite => memory[78][1].ENA
+memWrite => memory[78][2].ENA
+memWrite => memory[78][3].ENA
+memWrite => memory[78][4].ENA
+memWrite => memory[78][5].ENA
+memWrite => memory[78][6].ENA
+memWrite => memory[78][7].ENA
+memWrite => memory[79][0].ENA
+memWrite => memory[79][1].ENA
+memWrite => memory[79][2].ENA
+memWrite => memory[79][3].ENA
+memWrite => memory[79][4].ENA
+memWrite => memory[79][5].ENA
+memWrite => memory[79][6].ENA
+memWrite => memory[79][7].ENA
+memWrite => memory[80][0].ENA
+memWrite => memory[80][1].ENA
+memWrite => memory[80][2].ENA
+memWrite => memory[80][3].ENA
+memWrite => memory[80][4].ENA
+memWrite => memory[80][5].ENA
+memWrite => memory[80][6].ENA
+memWrite => memory[80][7].ENA
+memWrite => memory[81][0].ENA
+memWrite => memory[81][1].ENA
+memWrite => memory[81][2].ENA
+memWrite => memory[81][3].ENA
+memWrite => memory[81][4].ENA
+memWrite => memory[81][5].ENA
+memWrite => memory[81][6].ENA
+memWrite => memory[81][7].ENA
+memWrite => memory[82][0].ENA
+memWrite => memory[82][1].ENA
+memWrite => memory[82][2].ENA
+memWrite => memory[82][3].ENA
+memWrite => memory[82][4].ENA
+memWrite => memory[82][5].ENA
+memWrite => memory[82][6].ENA
+memWrite => memory[82][7].ENA
+memWrite => memory[83][0].ENA
+memWrite => memory[83][1].ENA
+memWrite => memory[83][2].ENA
+memWrite => memory[83][3].ENA
+memWrite => memory[83][4].ENA
+memWrite => memory[83][5].ENA
+memWrite => memory[83][6].ENA
+memWrite => memory[83][7].ENA
+memWrite => memory[84][0].ENA
+memWrite => memory[84][1].ENA
+memWrite => memory[84][2].ENA
+memWrite => memory[84][3].ENA
+memWrite => memory[84][4].ENA
+memWrite => memory[84][5].ENA
+memWrite => memory[84][6].ENA
+memWrite => memory[84][7].ENA
+memWrite => memory[85][0].ENA
+memWrite => memory[85][1].ENA
+memWrite => memory[85][2].ENA
+memWrite => memory[85][3].ENA
+memWrite => memory[85][4].ENA
+memWrite => memory[85][5].ENA
+memWrite => memory[85][6].ENA
+memWrite => memory[85][7].ENA
+memWrite => memory[86][0].ENA
+memWrite => memory[86][1].ENA
+memWrite => memory[86][2].ENA
+memWrite => memory[86][3].ENA
+memWrite => memory[86][4].ENA
+memWrite => memory[86][5].ENA
+memWrite => memory[86][6].ENA
+memWrite => memory[86][7].ENA
+memWrite => memory[87][0].ENA
+memWrite => memory[87][1].ENA
+memWrite => memory[87][2].ENA
+memWrite => memory[87][3].ENA
+memWrite => memory[87][4].ENA
+memWrite => memory[87][5].ENA
+memWrite => memory[87][6].ENA
+memWrite => memory[87][7].ENA
+memWrite => memory[88][0].ENA
+memWrite => memory[88][1].ENA
+memWrite => memory[88][2].ENA
+memWrite => memory[88][3].ENA
+memWrite => memory[88][4].ENA
+memWrite => memory[88][5].ENA
+memWrite => memory[88][6].ENA
+memWrite => memory[88][7].ENA
+memWrite => memory[89][0].ENA
+memWrite => memory[89][1].ENA
+memWrite => memory[89][2].ENA
+memWrite => memory[89][3].ENA
+memWrite => memory[89][4].ENA
+memWrite => memory[89][5].ENA
+memWrite => memory[89][6].ENA
+memWrite => memory[89][7].ENA
+memWrite => memory[90][0].ENA
+memWrite => memory[90][1].ENA
+memWrite => memory[90][2].ENA
+memWrite => memory[90][3].ENA
+memWrite => memory[90][4].ENA
+memWrite => memory[90][5].ENA
+memWrite => memory[90][6].ENA
+memWrite => memory[90][7].ENA
+memWrite => memory[91][0].ENA
+memWrite => memory[91][1].ENA
+memWrite => memory[91][2].ENA
+memWrite => memory[91][3].ENA
+memWrite => memory[91][4].ENA
+memWrite => memory[91][5].ENA
+memWrite => memory[91][6].ENA
+memWrite => memory[91][7].ENA
+memWrite => memory[92][0].ENA
+memWrite => memory[92][1].ENA
+memWrite => memory[92][2].ENA
+memWrite => memory[92][3].ENA
+memWrite => memory[92][4].ENA
+memWrite => memory[92][5].ENA
+memWrite => memory[92][6].ENA
+memWrite => memory[92][7].ENA
+memWrite => memory[93][0].ENA
+memWrite => memory[93][1].ENA
+memWrite => memory[93][2].ENA
+memWrite => memory[93][3].ENA
+memWrite => memory[93][4].ENA
+memWrite => memory[93][5].ENA
+memWrite => memory[93][6].ENA
+memWrite => memory[93][7].ENA
+memWrite => memory[94][0].ENA
+memWrite => memory[94][1].ENA
+memWrite => memory[94][2].ENA
+memWrite => memory[94][3].ENA
+memWrite => memory[94][4].ENA
+memWrite => memory[94][5].ENA
+memWrite => memory[94][6].ENA
+memWrite => memory[94][7].ENA
+memWrite => memory[95][0].ENA
+memWrite => memory[95][1].ENA
+memWrite => memory[95][2].ENA
+memWrite => memory[95][3].ENA
+memWrite => memory[95][4].ENA
+memWrite => memory[95][5].ENA
+memWrite => memory[95][6].ENA
+memWrite => memory[95][7].ENA
+memWrite => memory[96][0].ENA
+memWrite => memory[96][1].ENA
+memWrite => memory[96][2].ENA
+memWrite => memory[96][3].ENA
+memWrite => memory[96][4].ENA
+memWrite => memory[96][5].ENA
+memWrite => memory[96][6].ENA
+memWrite => memory[96][7].ENA
+memWrite => memory[97][0].ENA
+memWrite => memory[97][1].ENA
+memWrite => memory[97][2].ENA
+memWrite => memory[97][3].ENA
+memWrite => memory[97][4].ENA
+memWrite => memory[97][5].ENA
+memWrite => memory[97][6].ENA
+memWrite => memory[97][7].ENA
+memWrite => memory[98][0].ENA
+memWrite => memory[98][1].ENA
+memWrite => memory[98][2].ENA
+memWrite => memory[98][3].ENA
+memWrite => memory[98][4].ENA
+memWrite => memory[98][5].ENA
+memWrite => memory[98][6].ENA
+memWrite => memory[98][7].ENA
+memWrite => memory[99][0].ENA
+memWrite => memory[99][1].ENA
+memWrite => memory[99][2].ENA
+memWrite => memory[99][3].ENA
+memWrite => memory[99][4].ENA
+memWrite => memory[99][5].ENA
+memWrite => memory[99][6].ENA
+memWrite => memory[99][7].ENA
+memWrite => memory[100][0].ENA
+memWrite => memory[100][1].ENA
+memWrite => memory[100][2].ENA
+memWrite => memory[100][3].ENA
+memWrite => memory[100][4].ENA
+memWrite => memory[100][5].ENA
+memWrite => memory[100][6].ENA
+memWrite => memory[100][7].ENA
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+memRead => readData.OUTPUTSELECT
+adress[0] => Decoder0.IN6
+adress[0] => Add0.IN32
+adress[0] => Mux8.IN33
+adress[0] => Mux9.IN33
+adress[0] => Mux10.IN33
+adress[0] => Mux11.IN33
+adress[0] => Mux12.IN33
+adress[0] => Mux13.IN33
+adress[0] => Mux14.IN33
+adress[0] => Mux15.IN33
+adress[1] => Decoder0.IN5
+adress[1] => Add0.IN31
+adress[1] => Mux8.IN32
+adress[1] => Mux9.IN32
+adress[1] => Mux10.IN32
+adress[1] => Mux11.IN32
+adress[1] => Mux12.IN32
+adress[1] => Mux13.IN32
+adress[1] => Mux14.IN32
+adress[1] => Mux15.IN32
+adress[2] => Decoder0.IN4
+adress[2] => Add0.IN30
+adress[2] => Mux8.IN31
+adress[2] => Mux9.IN31
+adress[2] => Mux10.IN31
+adress[2] => Mux11.IN31
+adress[2] => Mux12.IN31
+adress[2] => Mux13.IN31
+adress[2] => Mux14.IN31
+adress[2] => Mux15.IN31
+adress[3] => Decoder0.IN3
+adress[3] => Add0.IN29
+adress[3] => Mux8.IN30
+adress[3] => Mux9.IN30
+adress[3] => Mux10.IN30
+adress[3] => Mux11.IN30
+adress[3] => Mux12.IN30
+adress[3] => Mux13.IN30
+adress[3] => Mux14.IN30
+adress[3] => Mux15.IN30
+adress[4] => Decoder0.IN2
+adress[4] => Add0.IN28
+adress[4] => Mux8.IN29
+adress[4] => Mux9.IN29
+adress[4] => Mux10.IN29
+adress[4] => Mux11.IN29
+adress[4] => Mux12.IN29
+adress[4] => Mux13.IN29
+adress[4] => Mux14.IN29
+adress[4] => Mux15.IN29
+adress[5] => Decoder0.IN1
+adress[5] => Add0.IN27
+adress[5] => Mux8.IN28
+adress[5] => Mux9.IN28
+adress[5] => Mux10.IN28
+adress[5] => Mux11.IN28
+adress[5] => Mux12.IN28
+adress[5] => Mux13.IN28
+adress[5] => Mux14.IN28
+adress[5] => Mux15.IN28
+adress[6] => Decoder0.IN0
+adress[6] => Add0.IN26
+adress[6] => Mux8.IN27
+adress[6] => Mux9.IN27
+adress[6] => Mux10.IN27
+adress[6] => Mux11.IN27
+adress[6] => Mux12.IN27
+adress[6] => Mux13.IN27
+adress[6] => Mux14.IN27
+adress[6] => Mux15.IN27
+adress[7] => LessThan0.IN18
+adress[7] => Add0.IN25
+adress[8] => LessThan0.IN17
+adress[8] => Add0.IN24
+adress[9] => LessThan0.IN16
+adress[9] => Add0.IN23
+adress[10] => LessThan0.IN15
+adress[10] => Add0.IN22
+adress[11] => LessThan0.IN14
+adress[11] => Add0.IN21
+adress[12] => LessThan0.IN13
+adress[12] => Add0.IN20
+adress[13] => LessThan0.IN12
+adress[13] => Add0.IN19
+adress[14] => LessThan0.IN11
+adress[14] => Add0.IN18
+adress[15] => LessThan0.IN10
+adress[15] => Add0.IN17
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[0] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[1] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[2] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[3] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[4] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[5] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[6] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[7] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[8] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[9] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[10] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[11] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[12] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[13] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[14] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+writeData[15] => memory.DATAB
+readData[0] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[1] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[2] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[3] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[4] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[5] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[6] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[7] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[8] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[9] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[10] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[11] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[12] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[13] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[14] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+readData[15] <= readData.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|mux16Bit2x1:muxLi
+in1[0] => out.DATAB
+in1[1] => out.DATAB
+in1[2] => out.DATAB
+in1[3] => out.DATAB
+in1[4] => out.DATAB
+in1[5] => out.DATAB
+in1[6] => out.DATAB
+in1[7] => out.DATAB
+in1[8] => out.DATAB
+in1[9] => out.DATAB
+in1[10] => out.DATAB
+in1[11] => out.DATAB
+in1[12] => out.DATAB
+in1[13] => out.DATAB
+in1[14] => out.DATAB
+in1[15] => out.DATAB
+in2[0] => out.DATAA
+in2[1] => out.DATAA
+in2[2] => out.DATAA
+in2[3] => out.DATAA
+in2[4] => out.DATAA
+in2[5] => out.DATAA
+in2[6] => out.DATAA
+in2[7] => out.DATAA
+in2[8] => out.DATAA
+in2[9] => out.DATAA
+in2[10] => out.DATAA
+in2[11] => out.DATAA
+in2[12] => out.DATAA
+in2[13] => out.DATAA
+in2[14] => out.DATAA
+in2[15] => out.DATAA
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+select => out.OUTPUTSELECT
+out[0] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[8] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[9] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[10] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[11] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[12] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[13] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[14] <= out.DB_MAX_OUTPUT_PORT_TYPE
+out[15] <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|mips16|mux2x1:muxBranch
+a => and1.IN0
+b => and2.IN0
+select => and2.IN1
+select => and1.IN1
+s <= or1.DB_MAX_OUTPUT_PORT_TYPE
+
+

@@ -1,0 +1,563 @@
+m255
+K3
+13
+cModel Technology
+Z0 dD:\org\CSE343-Computer-Organization\FinalProject\Verilog\simulation\modelsim
+valu16
+IijEcKa9<@AUn`_94eDWD12
+VYIcWVnIEH7jCTliEUHz=J3
+Z1 dD:\org\CSE343-Computer-Organization\FinalProject\Verilog\simulation\modelsim
+Z2 w1674251466
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu16.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu16.v
+L0 1
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-vlog01compat -work work -O0
+Z5 !s92 -vlog01compat -work work +incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog -O0
+!i10b 1
+!s100 VPD?N:IzT<d@Y:dJWAj:Y1
+!s85 0
+!s108 1674252459.645000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu16.v|
+!s101 -O0
+valu1Bit
+IfU0PeOa?d>j7<Fj1VK4d50
+V4?kfJ_3d1XKS6>LV1lV683
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1Bit.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1Bit.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu1@bit
+!i10b 1
+!s100 IaCSAA@8YC[8LVfF2]0[22
+!s85 0
+!s108 1674252459.073000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1Bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1Bit.v|
+!s101 -O0
+valu1BitLsb
+I4Y]AfM_JX`EhdJG_3@1[B1
+V@ZdLVogXagWQk=eofVg3O0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitLsb.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitLsb.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu1@bit@lsb
+!i10b 1
+!s100 _]mTQV9C3PWFVzn_7<>CE1
+!s85 0
+!s108 1674252459.233000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitLsb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitLsb.v|
+!s101 -O0
+valu1BitMsb
+I`CM:P]2g6M=6<dJmaeP3F2
+Ve^UdNT=c[=41UXeO`R^:m1
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitMsb.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitMsb.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu1@bit@msb
+!i10b 1
+!s100 kkB4kP3039ok@lH8Chk=L2
+!s85 0
+!s108 1674252459.325000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitMsb.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu1BitMsb.v|
+!s101 -O0
+valu2Bit
+I@jb]0>cK[WEIciP9TTk072
+VoHzcimTh:JnObEKW4`lnT0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu2Bit.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu2Bit.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu2@bit
+!i10b 1
+!s100 _1PA>@gFgjgX1zAmhG@XT3
+!s85 0
+!s108 1674252459.417000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu2Bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu2Bit.v|
+!s101 -O0
+valu4Bit
+Ig3aF:MTP2JR@[=QJB>AoQ1
+VzXIL`1d<BGiSB?M`FP3Id2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu4Bit.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu4Bit.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu4@bit
+!i10b 1
+!s100 [;heC0nLd5zOPEUKK4zbE2
+!s85 0
+!s108 1674252459.541000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu4Bit.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/alu4Bit.v|
+!s101 -O0
+valuControl
+I:D7ZmeEa:af]CdET;nz_71
+Vk9G=@W^9nETO^kPbIY:>h0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/aluControl.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/aluControl.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nalu@control
+!i10b 1
+!s100 VBGF4Y[6X9SJl@T^@k0cz1
+!s85 0
+!s108 1674252461.774000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/aluControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/aluControl.v|
+!s101 -O0
+vbarrelShifter
+IOCX=>3N05ZC:lCZOZS5bd2
+V8ezMnPd0HI?FOibH2gIWm0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifter.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifter.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nbarrel@shifter
+!i10b 1
+!s100 d:eGC?7SmWPRY_KTcIRWR1
+!s85 0
+!s108 1674252460.194000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifter.v|
+!s101 -O0
+vbarrelShifterL1
+ID1G[z@>=jJO>@XLBO3b4k1
+VW1COzCNeV[=ULNIbjWDm>3
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL1.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL1.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nbarrel@shifter@l1
+!i10b 1
+!s100 4k1F[Q<ZFKVg:0kZTPoQ[1
+!s85 0
+!s108 1674252460.306000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL1.v|
+!s101 -O0
+vbarrelShifterL2
+I<l7lYY3g69I8A1UH?`Fcj3
+ViF:5F^nQR>kU=ILjW3b@C3
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL2.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL2.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nbarrel@shifter@l2
+!i10b 1
+!s100 VNa6L:Y6R3Bg3YQ_aEUi@3
+!s85 0
+!s108 1674252460.442000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL2.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL2.v|
+!s101 -O0
+vbarrelShifterL3
+I@;l3VRm>C6lA>6AUGgmIz3
+VW5[k?AMK=4OBDe?U40kd21
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL3.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL3.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nbarrel@shifter@l3
+!i10b 1
+!s100 m3FiAVafIPjhfM9LYEbA20
+!s85 0
+!s108 1674252460.602000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL3.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL3.v|
+!s101 -O0
+vbarrelShifterL4
+I6>HABeRaElVXY>Da:M?Lj0
+VRGdBdBIX4HVRZ3PfePf9A0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL4.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL4.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nbarrel@shifter@l4
+!i10b 1
+!s100 @PDU4o]SAe4_DoZe>J`oM0
+!s85 0
+!s108 1674252460.710000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL4.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/barrelShifterL4.v|
+!s101 -O0
+vdataMemory
+I5SWf_^`>QHRI[0@f^J=ZB1
+V?2O3b62QR4>=fJm:5VlVa3
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/dataMemory.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/dataMemory.v
+L0 1
+R3
+r1
+31
+R4
+R5
+ndata@memory
+!i10b 1
+!s100 i48@7RYIDmd5NEZ]0@hzJ0
+!s85 0
+!s108 1674252461.330000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/dataMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/dataMemory.v|
+!s101 -O0
+vfullAdder
+IY@zIL9d`nNTNQNC`bh63X0
+V0TdUndh<YDEVD7h5`4F@:0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/fullAdder.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/fullAdder.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nfull@adder
+!i10b 1
+!s100 SBaSK6Ai:Sc^Hd2bUOff=0
+!s85 0
+!s108 1674252459.749000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/fullAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/fullAdder.v|
+!s101 -O0
+vhalfAdder
+IbA^CCQ3OIIjC`I?98dDzj1
+VhFOliDKV[8g:30``JzIoU2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/halfAdder.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/halfAdder.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nhalf@adder
+!i10b 1
+!s100 k4`1A4:98;T0RDj:2=;Ee2
+!s85 0
+!s108 1674252459.866000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/halfAdder.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/halfAdder.v|
+!s101 -O0
+vinsMemory
+IJeRB68Da<=UebchS3ehO70
+V93I6KW[j1i`6T`ZmB4k8J2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/insMemory.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/insMemory.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nins@memory
+!i10b 1
+!s100 aolZgCV:F9oGaOk^ghDf52
+!s85 0
+!s108 1674252461.558000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/insMemory.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/insMemory.v|
+!s101 -O0
+vmainControl
+IVz=o>WV>MD38G4eJmbLRD3
+Vn_b[EiPDZ?Ph`T9G3cf`P2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mainControl.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mainControl.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmain@control
+!i10b 1
+!s100 7feb4l55ONh:iH^zP=>a12
+!s85 0
+!s108 1674252461.674000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mainControl.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mainControl.v|
+!s101 -O0
+vmips16
+IGHABZGTh?gh6WYb?bGW[:0
+V]Dfc_TF6R1GdnMef;I`Me2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 R=@A2CUGUM5?Ml4RRQLVK3
+!s85 0
+!s108 1674252461.450000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16.v|
+!s101 -O0
+vmips16Testbench
+!i10b 1
+!s100 a:8b`XnVm0LQ=N5YV1ER60
+I2Y0Xc>?c1;jII3=91`T6?3
+VYDZWKfBBA6YlUNVVGWZWS0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v
+L0 3
+R3
+r1
+!s85 0
+31
+!s108 1674252490.198000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v|
+!s90 -reportprogress|300|-work|work|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mips16Testbench.v|
+!s101 -O0
+o-work work -O0
+nmips16@testbench
+vmirror
+I4DUaVe5Sm]G0k=l7j0Mke0
+V]izo41PFj;`FT=U5?n:d62
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mirror.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mirror.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 TjN_hgXR`Ikbb02O_>a4l2
+!s85 0
+!s108 1674252460.814000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mirror.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mirror.v|
+!s101 -O0
+vmux16Bit2x1
+Igm0BQij>1XA8eKcQ7koN<1
+VC[A:_o_0hLNjzl6A^SG=l2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux16Bit2x1.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux16Bit2x1.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nmux16@bit2x1
+!i10b 1
+!s100 zX@LEI29]Vihc]XXEITPS0
+!s85 0
+!s108 1674252460.926000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux16Bit2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux16Bit2x1.v|
+!s101 -O0
+vmux2x1
+I:F5_UdN>z;SO0@>_n7aQW3
+VL8Z_[VQld1o^30[T4iWf:0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux2x1.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux2x1.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 :24OH2i9Q9UXIeX0CIm=12
+!s85 0
+!s108 1674252458.905000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux2x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux2x1.v|
+!s101 -O0
+vmux4x1
+IWhk`_a:?lXHBQPjnM6=BX1
+VA9IlP]6m7gGcIHXBjjg[V0
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux4x1.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux4x1.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 ?Rf<A4GOVBdRDC3=[GMgS1
+!s85 0
+!s108 1674252459.982000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux4x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux4x1.v|
+!s101 -O0
+vmux8x1
+IRb4fc`nH07aTSI`;][ije2
+V5Mk4GR1G6Uf4;A8YO`Oll2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux8x1.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux8x1.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 mANIB6gjc=zeQlzUhE3;H0
+!s85 0
+!s108 1674252460.086000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux8x1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/mux8x1.v|
+!s101 -O0
+vpc
+IBBJah8::`3WIK_Jg4hZE]3
+VnSIi=9iZHc_IT:j@1RA8L2
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/pc.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/pc.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 6NKKnK35S^6UG_?cfQYjG0
+!s85 0
+!s108 1674252461.882000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/pc.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/pc.v|
+!s101 -O0
+vregisterFile
+IOV[7o^?7P^:V0ag4ZeWA91
+Voha4`4IoBe_gFb?6Mi`6A3
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/registerFile.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/registerFile.v
+L0 1
+R3
+r1
+31
+R4
+R5
+nregister@file
+!i10b 1
+!s100 <fAzJGLlI^>80i9]:DfbP1
+!s85 0
+!s108 1674252461.210000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/registerFile.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/registerFile.v|
+!s101 -O0
+vshifter
+I0UnAShcW3M@HgIhzXdzTU1
+VBjf:E?eEX=C8k`C98a]TK3
+R1
+R2
+8D:/org/CSE343-Computer-Organization/FinalProject/Verilog/shifter.v
+FD:/org/CSE343-Computer-Organization/FinalProject/Verilog/shifter.v
+L0 1
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 oog`jkDd5fAV8>gQBz:i>2
+!s85 0
+!s108 1674252461.090000
+!s107 D:/org/CSE343-Computer-Organization/FinalProject/Verilog/shifter.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+D:/org/CSE343-Computer-Organization/FinalProject/Verilog|D:/org/CSE343-Computer-Organization/FinalProject/Verilog/shifter.v|
+!s101 -O0

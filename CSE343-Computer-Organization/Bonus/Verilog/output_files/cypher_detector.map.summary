@@ -1,0 +1,18 @@
+Analysis & Synthesis Status : Successful - Mon Jan 09 22:41:28 2023
+Quartus II 64-Bit Version : 13.1.0 Build 162 10/23/2013 SJ Web Edition
+Revision Name : cypher_detector
+Top-level Entity Name : cypher_detector
+Family : Cyclone IV GX
+Total logic elements : 49
+    Total combinational functions : 45
+    Dedicated logic registers : 21
+Total registers : 21
+Total pins : 43
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0
+Total GXB Receiver Channel PMA : 0
+Total GXB Transmitter Channel PCS : 0
+Total GXB Transmitter Channel PMA : 0
+Total PLLs : 0

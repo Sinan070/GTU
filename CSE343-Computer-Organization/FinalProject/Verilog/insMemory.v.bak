@@ -1,0 +1,9 @@
+module insMemory(input [31:0]pcCurrent, output [31:0] instruction);
+
+reg[31:0] memory[1024];
+
+assign instruction = memory[pcCurrent[9:0]];
+
+
+endmodule
+

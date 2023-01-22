@@ -1,0 +1,14 @@
+module pC(input [31:0]q input clk, output[31:0] d);
+
+
+reg [31:0] pc;
+
+
+always(posedge clk)begin
+	pc <= q;
+	pc <= pc +4;
+end
+
+assign d = pc; 
+
+endmodule

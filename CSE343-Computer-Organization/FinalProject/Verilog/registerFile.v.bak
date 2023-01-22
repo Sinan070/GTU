@@ -1,0 +1,7 @@
+module registerFile(input [4:0]readReg1 , readReg2, writeReg,input[15:0] writeData);
+
+
+
+endmodule
+
+	

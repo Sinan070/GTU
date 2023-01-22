@@ -1,0 +1,2 @@
+Info (10281): Verilog HDL Declaration information at mainControl.v(13): object "jal" differs only in case from object "JAL" in the same scope
+Info (10281): Verilog HDL Declaration information at mainControl.v(11): object "sll" differs only in case from object "SLL" in the same scope

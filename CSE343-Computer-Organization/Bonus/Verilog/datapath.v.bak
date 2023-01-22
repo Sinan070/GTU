@@ -1,0 +1,7 @@
+module datapath(input [15:0] cypher, input [3:0] in,output [2:0]reg );
+
+reg [2:0] index;
+
+
+
+endmodule

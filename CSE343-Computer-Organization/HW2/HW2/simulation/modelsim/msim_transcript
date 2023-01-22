@@ -1,0 +1,304 @@
+# Reading D:/quartusSetup/modelsim_ase/tcl/vsim/pref.tcl 
+# do HW2_WITHMUL_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied D:\quartusSetup\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1Bit
+# 
+# Top level modules:
+# 	alu1Bit
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1BitLsb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1BitLsb
+# 
+# Top level modules:
+# 	alu1BitLsb
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu1BitMsb.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu1BitMsb
+# 
+# Top level modules:
+# 	alu1BitMsb
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/halfAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module halfAdder
+# 
+# Top level modules:
+# 	halfAdder
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/fullAdder.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module fullAdder
+# 
+# Top level modules:
+# 	fullAdder
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux2x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux2x1
+# 
+# Top level modules:
+# 	mux2x1
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux4x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux4x1
+# 
+# Top level modules:
+# 	mux4x1
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/mux8x1.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux8x1
+# 
+# Top level modules:
+# 	mux8x1
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu2Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu2Bit
+# 
+# Top level modules:
+# 	alu2Bit
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu4Bit.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu4Bit
+# 
+# Top level modules:
+# 	alu4Bit
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu32.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu32
+# 
+# Top level modules:
+# 	alu32
+# 
+# vlog -vlog01compat -work work +incdir+D:/HW2 {D:/HW2/alu32Testbench.v}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module alu32Testbench
+# 
+# Top level modules:
+# 	alu32Testbench
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  alu32Testbenchh
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps alu32Testbenchh 
+# ** Error: (vsim-3170) Could not find 'D:/HW2/simulation/modelsim/rtl_work.alu32Testbenchh'.
+# 
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./HW2_WITHMUL_run_msim_rtl_verilog.do PAUSED at line 22
+vlog -reportprogress 300 -work work D:/HW2/addTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module addTestbench
+# 
+# Top level modules:
+# 	addTestbench
+vlog -reportprogress 300 -work work D:/HW2/andTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module andTestbench
+# 
+# Top level modules:
+# 	andTestbench
+vlog -reportprogress 300 -work work D:/HW2/norTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module norTestbench
+# 
+# Top level modules:
+# 	norTestbench
+vlog -reportprogress 300 -work work D:/HW2/orTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module orTestbench
+# 
+# Top level modules:
+# 	orTestbench
+vlog -reportprogress 300 -work work D:/HW2/sltTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module sltTestbench
+# 
+# Top level modules:
+# 	sltTestbench
+vlog -reportprogress 300 -work work D:/HW2/subTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module subTestbench
+# 
+# Top level modules:
+# 	subTestbench
+vlog -reportprogress 300 -work work D:/HW2/xorTestbench.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module xorTestbench
+# 
+# Top level modules:
+# 	xorTestbench
+vsim work.xorTestbench
+# vsim work.xorTestbench 
+# Loading work.xorTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /xorTestbench/test/alu9
+add wave -position end  sim:/xorTestbench/a
+add wave -position end  sim:/xorTestbench/b
+add wave -position end  sim:/xorTestbench/alu_op
+add wave -position end  sim:/xorTestbench/c_out
+add wave -position end  sim:/xorTestbench/s
+run -all
+# Break in Module xorTestbench at D:/HW2/xorTestbench.v line 33
+vsim work.subTestbench
+# vsim work.subTestbench 
+# Loading work.subTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /subTestbench/test/alu9
+add wave -position end  sim:/subTestbench/a
+add wave -position end  sim:/subTestbench/b
+add wave -position end  sim:/subTestbench/alu_op
+add wave -position end  sim:/subTestbench/c_out
+add wave -position end  sim:/subTestbench/s
+run -all
+# Break in Module subTestbench at D:/HW2/subTestbench.v line 33
+vsim work.sltTestbench
+# vsim work.sltTestbench 
+# Loading work.sltTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /sltTestbench/test/alu9
+add wave -position end  sim:/sltTestbench/a
+add wave -position end  sim:/sltTestbench/b
+add wave -position end  sim:/sltTestbench/alu_op
+add wave -position end  sim:/sltTestbench/c_out
+add wave -position end  sim:/sltTestbench/s
+run -all
+# Break in Module sltTestbench at D:/HW2/sltTestbench.v line 33
+vsim work.orTestbench
+# vsim work.orTestbench 
+# Loading work.orTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /orTestbench/test/alu9
+add wave -position end  sim:/orTestbench/a
+add wave -position end  sim:/orTestbench/b
+add wave -position end  sim:/orTestbench/alu_op
+add wave -position end  sim:/orTestbench/c_out
+add wave -position end  sim:/orTestbench/s
+run -all
+# Break in Module orTestbench at D:/HW2/orTestbench.v line 33
+vsim work.andTestbench
+# vsim work.andTestbench 
+# Loading work.andTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /andTestbench/test/alu9
+add wave -position end  sim:/andTestbench/a
+add wave -position end  sim:/andTestbench/b
+add wave -position end  sim:/andTestbench/alu_op
+add wave -position end  sim:/andTestbench/c_out
+add wave -position end  sim:/andTestbench/s
+run -all
+# Break in Module andTestbench at D:/HW2/andTestbench.v line 32
+vsim work.addTestbench
+# vsim work.addTestbench 
+# Loading work.addTestbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /addTestbench/test/alu9
+add wave -position end  sim:/addTestbench/a
+add wave -position end  sim:/addTestbench/b
+add wave -position end  sim:/addTestbench/alu_op
+add wave -position end  sim:/addTestbench/c_out
+add wave -position end  sim:/addTestbench/s
+run -all
+# Break in Module addTestbench at D:/HW2/addTestbench.v line 33
+vsim work.alu32Testbench
+# vsim work.alu32Testbench 
+# Loading work.alu32Testbench
+# Loading work.alu32
+# Loading work.alu1BitLsb
+# Loading work.mux2x1
+# Loading work.fullAdder
+# Loading work.halfAdder
+# Loading work.mux8x1
+# Loading work.mux4x1
+# Loading work.alu4Bit
+# Loading work.alu2Bit
+# Loading work.alu1Bit
+# Loading work.alu1BitMsb
+# ** Warning: (vsim-3015) D:/HW2/alu32.v(19): [PCDPC] - Port size (2 or 2) does not match connection size (4) for port 'p'. The port definition is at: D:/HW2/alu2Bit.v(1).
+# 
+#         Region: /alu32Testbench/test/alu9
+add wave -position end  sim:/alu32Testbench/a
+add wave -position end  sim:/alu32Testbench/b
+add wave -position end  sim:/alu32Testbench/alu_op
+add wave -position end  sim:/alu32Testbench/c_out
+add wave -position end  sim:/alu32Testbench/s
+run -all
+# Break in Module alu32Testbench at D:/HW2/alu32Testbench.v line 41
