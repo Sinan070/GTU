@@ -1,0 +1,155 @@
+PlayAuto Function is testing
+Initial Board
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+Final Board
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e 0 e
+Score :1
+
+
+
+PlayAutoAll Function is testing
+Initial Board
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+Final Board
+
+	KLOTSKI BOARD
+ 0 9 3 4
+ 6 1 3 4
+ 6 1 5 5
+ e 2 2 8
+ e 2 2 7
+Score :100152
+
+
+
+PlayUser(string) Function is testing
+Initial Board
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+Please Enter the move : Final Board
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e 0 e
+Score :1
+
+
+
+PlayUser Function is testing
+Initial Board
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e 0 e
+Score :1
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 e
+ 4 7 8 6
+ 9 e 0 6
+Score :2
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 e 5 5
+ 4 7 8 6
+ 9 e 0 6
+Score :3
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 e 5 5
+ 4 e 8 6
+ 9 7 0 6
+Score :4
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ e 4 5 5
+ e 4 8 6
+ 9 7 0 6
+Score :5
+
+Please Enter the Move : 
+
+	KLOTSKI BOARD
+ e 2 2 3
+ 1 2 2 3
+ 1 4 5 5
+ e 4 8 6
+ 9 7 0 6
+Score :6
+
+Please Enter the Move : 

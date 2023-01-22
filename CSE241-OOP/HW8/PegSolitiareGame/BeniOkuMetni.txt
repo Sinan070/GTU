@@ -1,0 +1,6 @@
+Hocam , Uygulama Java Version 11 ile uyumlu çalışabiliyor.
+Make ile başlatabilirsiniz. 
+Save dosyaları src klasöründedir.
+Saygılar.
+Muhammed Sinan Pehlivanoğlu
+1901042664

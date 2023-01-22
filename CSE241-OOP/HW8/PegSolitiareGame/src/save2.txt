@@ -1,0 +1,12 @@
+9
+2
+space space space peg peg peg space space space 
+space space space peg peg peg space space space 
+space space space peg empty peg space space space 
+empty empty peg peg peg peg peg peg peg 
+peg peg peg empty empty empty empty peg peg 
+peg peg peg peg empty empty peg peg peg 
+space space space peg peg peg space space space 
+space space space peg peg peg space space space 
+space space space peg peg peg space space space 
+36

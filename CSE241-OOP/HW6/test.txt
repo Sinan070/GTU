@@ -1,0 +1,110 @@
+Insert element to V1 using Push back operation:
+
+V1 is:   0 3 6 9 12 Size of V1 : 5
+
+
+Delete element from V1 using pop_back operation
+New V1 is :    0 3 6 9 
+Size of V1 : 4
+
+
+Value of Iterator pointer to beginnig of the V1 : 0
+
+Value of Iterator pointer to end of the V1 : 9
+
+Print the V1 using iterator increment and range base for loop :0 3 6 9
+
+Find second element
+Founded element is :  3
+
+Print the V1 using iterator increment and foreach :0 3 6 9 
+
+Erase first element from V1 using iterator
+New V1 is:  3 6 9
+Size of V1 : 3
+
+New vector V2 was created from V1 using copy constructor
+Vector is :   369
+Size of V2 : 3
+
+Call push_Back op on V2
+V2 is using operator[]  :   3 6 9 78 7 
+Size of V2 : 5
+
+Assign V2 to V1 using assigment op
+The V1 vector is now :   3 6 9 78 7
+Size of V1 : 5
+
+Move assigment op V1 to V2.
+V1 is going to be empty
+V2 is:    3 6 9 78 7 
+V1 is:    3 6 9 78 7 
+
+Clear the V2
+V2 is :       
+
+
+SET TEST
+
+
+Add element to S1 using add() twice
+S1 is :             0 3 6 9 12
+Size of S1 : 5
+
+Delete last element from S1
+
+Size of S1 : 4
+
+Copy assignment S1 to S2
+S2 is:    0 3 6 9 
+
+Intersection Set of S1 and S2: 
+0 3 6 9
+
+Add 75 to S2
+
+
+Delete first element from S2 using iterator (s2.begin())
+
+
+Print S2 using for_each :      3 6 9 75 Find last element from S2 using find()
+Founded element is :   75
+
+Clear S2
+S2 is :   
+
+
+
+GTU ARRAY TEST
+
+Negative index test using try cath block
+
+
+Add elements to AR1 using operator[]
+AR1 is:       0 5 10 15 20 
+Size of array : 5
+
+Acces to the first element :  0
+
+Acces to the last element :  20
+
+Create AR2 with copy assigment op
+
+Change the second elemet of AR2 using operator[]
+
+Print AR2 using range based for loop
+0 665 10 15 20
+
+Create AR3 then assign AR2 to AR3 using assign operator
+Print ar3 using for_each
+AR3 is:   0 665 10 15 20 
+
+Find last element using Find function
+Founded element is:  20
+
+Use Move assigment , AR3 to AR1. AR3 is going to be empty
+AR1 is:   0 665 10 15 20
+
+Fill The Array with number Using Fill()
+AR1 is:   15 15 15 15 15
+Size of array : 5

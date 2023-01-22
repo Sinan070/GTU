@@ -1,0 +1,143 @@
+PlayAuto Function is testing
+Initial Board
+
+
+	3X3 PUZZLE
+ 4 6 3
+ 2 7 8
+ 1 5 0
+Score : 0
+
+Final Board
+
+	3X3 PUZZLE
+ 4 6 3
+ 2 7 0
+ 1 5 8
+Score : 1
+
+
+
+PlayAutoAll Function is testing
+Initial Board
+
+
+	3X3 PUZZLE
+ 4 6 3
+ 2 7 0
+ 1 5 8
+Score : 1
+
+Final Board
+
+	3X3 PUZZLE
+ 1 2 3
+ 4 5 6
+ 7 8 0
+Score : 95020
+
+
+
+PlayUser(string) Function is testing
+Initial Board
+
+
+	3X3 PUZZLE
+ 1 5 7
+ 4 8 2
+ 3 6 0
+Score : 0
+
+Please Enter the move : Final Board
+
+	3X3 PUZZLE
+ 1 5 7
+ 4 8 0
+ 3 6 2
+Score : 1
+
+
+
+PlayUser Function is testing
+Initial Board
+
+
+	3X3 PUZZLE
+ 4 1 2
+ 6 3 7
+ 5 8 0
+Score : 0
+
+
+
+	3X3 PUZZLE
+ 4 1 2
+ 6 3 7
+ 5 8 0
+Score : 0
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 4 1 2
+ 6 3 7
+ 5 0 8
+Score : 1
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 4 1 2
+ 6 0 7
+ 5 3 8
+Score : 2
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 4 1 2
+ 6 7 0
+ 5 3 8
+Score : 3
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 4 1 0
+ 6 7 2
+ 5 3 8
+Score : 4
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 4 0 1
+ 6 7 2
+ 5 3 8
+Score : 5
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 0 4 1
+ 6 7 2
+ 5 3 8
+Score : 6
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 6 4 1
+ 0 7 2
+ 5 3 8
+Score : 7
+
+Please Enter the Move : 
+
+	3X3 PUZZLE
+ 6 4 1
+ 5 7 2
+ 0 3 8
+Score : 8
+
+Please Enter the Move : 

@@ -1,0 +1,11 @@
+8
+3
+space space peg peg peg space space space 
+space space peg peg peg space space space 
+space space peg peg empty space space space 
+peg peg peg peg empty peg peg peg 
+peg peg peg empty empty peg peg peg 
+peg peg peg peg peg peg peg peg 
+space space peg peg peg space space space 
+space space peg peg peg space space space 
+35

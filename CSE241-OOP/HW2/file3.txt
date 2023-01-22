@@ -1,0 +1,12 @@
+ abcdefghjklm
+1   . ..PPPP
+2PPP. PP..P.P	
+3P.P.PPP.PP.P
+4PPP.PPPP.PP.
+5PP..PP PPP.P
+6..P PP..PPPP
+7PPPP..PPP..
+8PPPP..PPPP..
+9.P.P.P.P.PPP
+10PPPPPPPPPPP
+Game Type: Move:

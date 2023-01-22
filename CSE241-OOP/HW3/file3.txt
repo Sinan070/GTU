@@ -1,0 +1,11 @@
+ abcdefghi
+1    P..    
+2   PPP.   
+3  P..PP  
+4 PP..PPP 
+5P..P.PPPP
+6 P..PPPPP 
+7  P..PPP  
+8   P.P   
+9    P    
+10 PP...  

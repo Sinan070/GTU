@@ -1,0 +1,207 @@
+Vector Function is testing
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+
+
+
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              .  .  .          
+
+3              P  .  .          
+
+4     P  .  P  .  .  .  P  .  P 
+
+5     .  .  .  .  .  .  .  .  . 
+
+6     .  P  .  .  .  .  .  .  . 
+
+7              P  .  P          
+
+8              .  .  .          
+
+9              P  .  .          
+
+Score : 12
+
+
+
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+
+
+
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              .  .  P          
+
+2              P  .  .          
+
+3              .  .  .          
+
+4     P  .  P  .  P  .  P  .  P 
+
+5     .  .  .  .  .  P  .  .  . 
+
+6     .  .  P  .  .  .  .  .  P 
+
+7              P  .  .          
+
+8              .  .  .          
+
+9              P  P  P          
+
+Score : 14
+
+
+
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+
+
+
+
+
+	KLOTSKI BOARD
+ 6 3 8 9
+ 6 3 1 4
+ 5 5 1 4
+ 0 2 2 e
+ 7 2 2 e
+Score :811206
+
+
+
+
+
+	KLOTSKI BOARD
+ 1 2 2 3
+ 1 2 2 3
+ 4 5 5 6
+ 4 7 8 6
+ 9 e e 0
+Score :0
+
+
+
+
+
+
+	KLOTSKI BOARD
+ 6 1 3 4
+ 6 1 3 4
+ 5 5 8 7
+ 9 2 2 e
+ 0 2 2 e
+Score :101150
+
+
+
+
+
+	3X3 PUZZLE
+ 7 1 4
+ 3 6 5
+ 2 8 0
+Score : 0
+
+
+
+
+
+
+	3X3 PUZZLE
+ 1 2 3
+ 4 5 6
+ 7 8 0
+Score : 317022
+
+
+
+
+
+	3X3 PUZZLE
+ 1 6 2
+ 3 8 7
+ 5 4 0
+Score : 0
+
+
+
+
+
+
+	3X3 PUZZLE
+ 1 2 3
+ 4 5 6
+ 7 8 0
+Score : 216040
+
+
+

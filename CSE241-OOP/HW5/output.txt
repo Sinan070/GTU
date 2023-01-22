@@ -1,0 +1,327 @@
+PlayAuto Function is testing
+Initial Board
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+Final Board
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  P  .  .  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 43
+
+
+
+PlayAutoAll Function is testing
+Initial Board
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+Final Board
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              .  .  .          
+
+2              .  .  .          
+
+3              P  .  .          
+
+4     P  .  .  .  .  .  P  .  P 
+
+5     .  .  .  P  .  P  .  .  . 
+
+6     P  .  .  .  .  .  .  .  . 
+
+7              .  .  P          
+
+8              .  .  .          
+
+9              P  P  P          
+
+Score : 11
+
+
+
+PlayUser(string) Function is testing
+Initial Board
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+Please Enter the move : Final Board
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  .  P          
+
+4     P  P  P  P  .  P  P  P  P 
+
+5     P  P  P  P  P  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 43
+
+
+
+PlayUser Function is testing
+Initial Board
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  P  P          
+
+4     P  P  P  P  P  P  P  P  P 
+
+5     P  P  P  P  .  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 44
+
+Please Enter the Move : 
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  .  P          
+
+4     P  P  P  P  .  P  P  P  P 
+
+5     P  P  P  P  P  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 43
+
+Please Enter the Move : 
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  .  P          
+
+4     P  P  .  .  P  P  P  P  P 
+
+5     P  P  P  P  P  P  P  P  P 
+
+6     P  P  P  P  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 42
+
+Please Enter the Move : 
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  .  P          
+
+4     P  P  .  P  P  P  P  P  P 
+
+5     P  P  P  .  P  P  P  P  P 
+
+6     P  P  P  .  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 41
+
+Please Enter the Move : 
+
+
+      ****** BOARD *******
+      a  b  c  d  e  f  g  h  i  
+
+1              P  P  P          
+
+2              P  P  P          
+
+3              P  .  P          
+
+4     P  P  .  P  P  P  P  P  P 
+
+5     P  P  P  P  .  .  P  P  P 
+
+6     P  P  P  .  P  P  P  P  P 
+
+7              P  P  P          
+
+8              P  P  P          
+
+9              P  P  P          
+
+Score : 40
+
+Please Enter the Move : 
