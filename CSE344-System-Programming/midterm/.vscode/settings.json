@@ -1,0 +1,12 @@
+{
+    "files.associations": {
+        "atomic": "c",
+        "*.tcc": "c",
+        "fstream": "c",
+        "sstream": "c",
+        "stat.h": "c",
+        "bitset": "c",
+        "set": "c"
+    },
+    "C_Cpp.errorSquiggles": "enabled"
+}
