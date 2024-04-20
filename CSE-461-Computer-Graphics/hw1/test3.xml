@@ -1,0 +1,113 @@
+<Scene>
+    <maxraytracedepth>0</maxraytracedepth>
+
+    <backgroundColor>0 0 0</backgroundColor>
+
+    
+	<camera>
+		<position>0 0 50</position>
+		<gaze>0 0 -1</gaze>
+		<up>0 1 0</up>
+        <nearPlane>-10 10 -10 10</nearPlane>
+        <neardistance>10</neardistance>
+        <imageresolution>800 800</imageresolution>
+	</camera>
+    
+
+    <lights>
+        <ambientlight>20 20 20</ambientlight>
+        
+        <triangularlight id="1">
+
+            
+            <vertex1> -10 20 10 </vertex1>
+            <vertex3> 0 20 -10 </vertex3>
+            <vertex2> 10 20 10 </vertex2>
+            <intensity> 62800 62800 62800 </intensity>
+        </triangularlight>
+    </lights>
+
+    <materials>
+        <material id="1">
+            <ambient>1 1 1</ambient>
+            <diffuse>0.8 0.8 0.8</diffuse>
+            <specular>0 0 0</specular>
+        </material>
+        <material id="2">
+            <ambient>1 0 0</ambient>
+            <diffuse>1 0 0</diffuse>
+            <specular>0 0 0</specular>
+        </material>
+        <material id="3">
+            <ambient>0 0 1</ambient>
+            <diffuse>0 0 1</diffuse>
+            <specular>0 0 0</specular>
+        </material>
+        <material id="4">
+            <ambient>0.1 0.5 0.1</ambient>
+            <diffuse>0.02 0.11 0.02</diffuse>
+            <specular>0 0.11 0</specular>
+        </material>
+        <material id="5">
+            <ambient>1 1 1</ambient>
+            <diffuse>0 0 0</diffuse>
+            <specular>0 0 0</specular>
+            <MirrorReflectance>0.9 0.9 0.9</MirrorReflectance>
+        </material>
+        <material id="6">
+            <ambient>1 1 1</ambient>
+            <diffuse>0.5 0.5 0.5</diffuse>
+            <specular>1 1 1</specular>
+        </material>
+    </materials>
+
+    <vertexdata>
+        -10 -10 10
+        10 -10 10
+        10 10 10
+        -10 10 10
+        -10 -10 -10
+        10 -10 -10
+        10 10 -10
+        -10 10 -10
+        5 -6 1
+        -5 -6 -5
+        -20 20 0 
+        20 20 0 
+        -20 20 5
+    </vertexdata>
+
+    <objects>
+        <mesh id="1">
+            <material>1</material>
+            <faces>
+                1 2 6
+                6 5 1
+            </faces>
+        </mesh>
+        <mesh id="2">
+            <material>1</material>
+            <faces>
+                5 6 7
+                7 8 5
+            </faces>
+        </mesh>
+      
+        <mesh id="3">
+            <material>2</material>
+            <faces>
+                8 4 1
+                8 1 5		
+            </faces>
+        </mesh>
+        <mesh id="4">
+            <material>3</material>
+            <faces>
+                2 3 7
+                2 7 6
+            </faces>
+        </mesh>
+        
+       
+    </objects>
+</Scene>

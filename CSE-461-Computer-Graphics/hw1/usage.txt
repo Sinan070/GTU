@@ -1,0 +1,4 @@
+to compile >> make.
+to run  >> ./rayTracing <input xml> <output ppm>
+
+Note: Rendering the dragon takes around  5 five. So I added the result. The result is ppm format.
